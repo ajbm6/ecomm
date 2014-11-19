@@ -24,8 +24,8 @@
 					<form method="post" class="form-inline" action="{{ URL::to('admin/products/toggle-availability') }}">
 						<input type="hidden" name="id" value="{{ $product->id }}">
 						<select name="availability">
-							<option value="1"{{ ($product->availability === 1) ? ' checked' : '' }}>In Stock</option>
-							<option value="0"{{ ($product->availability === 0) ? ' checked' : '' }}>Out of Stock</option>
+							<option value="1"{{ ($product->availability === 1) ? ' selected' : '' }}>In Stock</option>
+							<option value="0"{{ ($product->availability === 0) ? ' selected' : '' }}>Out of Stock</option>
 						</select>
 						<input type="submit" value="Update">
 						{{ Form::token() }}

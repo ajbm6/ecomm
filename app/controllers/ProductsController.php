@@ -29,10 +29,10 @@ class ProductsController extends BaseController {
 			$product->price			= Input::get('price');
 
 			$image		= Input::file('image');
-			$filename	= date('Y-m-d-H:i:s').'-'.$image->getClientOriginalName();
+			$filename	= date('Y-m-d-His').'-'.$image->getClientOriginalName();
 			Image::make($image->getRealPath())
 				->resize(468, 249)
-				->save('public/img/products/'.$filename);
+				->save(public_path('img/products/' . $filename));
 
 			$product->image			= 'img/products/'.$filename;
 
