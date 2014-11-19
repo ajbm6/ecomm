@@ -10,7 +10,7 @@ class ProductsController extends BaseController {
 		$categories = [];
 
 		foreach (Category::all() as $category) {
-			$categories[$category->id] = $category->name
+			$categories[$category->id] = $category->name;
 		}
 
 		return	View::make('products.index')
@@ -51,18 +51,32 @@ class ProductsController extends BaseController {
 	public function postDestroy(){
 		$product = Product::find(Input::get('id'));
 
+		$message = 'Something went wrong, please try again';
+
 		if ($product) {
 			File::delete('public/'.$product->image);
 			$product->delete();
-			return	Redirect::to('admin/products/index')
-					->with('message', 'Product Deleted');
+
+			$message = 'Product Deleted';
 		}
 
 		return	Redirect::to('admin/products/index')
-				->with('message', 'Something went wrong, please try again');
+				->with('message', $message);
 	}
 
 	public function postToggleAvailability(){
-		// code here
+		$product = Product::find(Input::get('id'));
+
+		$message = 'Invalid Product';
+
+		if ($product) {
+			$product->availability = Input::get('availability');
+			$product->save();
+
+			$message = 'Product Updated';
+		}
+
+		return	Redirect::to('admin/products/index')
+				->with('message', $message);
 	}
 }
