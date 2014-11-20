@@ -11,7 +11,13 @@ class StoreController extends BaseController {
 	}
 
 	public function getView($id){
-		return View::make('store.view')->with('product', Product::find($id));
+		$product = Product::find($id);
+
+		if ($product) {
+			return View::make('store.view')->with('product', $product);
+		}
+
+		return	Redirect::to('/')->with('message', 'Invalid Product');
 	}
 
 }
