@@ -19,6 +19,7 @@ SET time_zone = "+00:00";
 --
 -- Database: `ecomm`
 --
+DROP DATABASE `ecomm`;
 CREATE DATABASE IF NOT EXISTS `ecomm` DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
 USE `ecomm`;
 
