@@ -25,12 +25,17 @@
 
 				<p>{{ $product->description }}</p>
 
-				<h5>Availability: <span class="instock">In Stock</span></h5>
+				<h5>
+					Availability:
+					<span class="{{ Availability::cssClass($product->availability) }}">
+						{{ Availability::display($product->availability) }}
+					</span>
+				</h5>
 
 				<p>
 					<a href="#" class="cart-btn">
 						<span class="price">P{{ $product->price }}</span>
-						<img src="img/white-cart.gif" alt="Add to Cart">
+						<img src="{{ asset('img/white-cart.gif') }}">
 						ADD TO CART
 					</a>
 				</p>
