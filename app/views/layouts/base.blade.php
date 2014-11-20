@@ -88,7 +88,7 @@
 
 			@yield('promo')
 
-			<hr />
+			<hr>
 
 			<section id="main-content" class="clearfix">
 				@if(Session::has('message'))
@@ -98,14 +98,14 @@
 				@yield('content')
 			</section><!-- end main-content -->
 	
-			<hr />
+			<hr>
 
 			<footer>
 				<section id="contact">
 					<h3>For phone orders please call 1-800-000. You<br>can also email us at <a href="mailto:office@shop.com">office@shop.com</a></h3>
 				</section><!-- end contact -->
 
-				<hr />
+				<hr>
 
 				<section id="links">
 					<div id="my-account">
@@ -133,7 +133,7 @@
 					</div><!-- end extras -->
 				</section><!-- end links -->
 
-				<hr />
+				<hr>
 
 				<section class="clearfix">
 					<div id="copyright">
