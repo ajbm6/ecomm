@@ -210,8 +210,6 @@ header a:link, header a:visited {
     padding: 5px;
     width: 160px;
     border-radius: 5px;
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
     background-color: #fff;
 }
 
@@ -233,8 +231,6 @@ header a:link, header a:visited {
     border: 1px solid #eee;
     padding: 5px 10px;
     border-radius: 5px;
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
 }
 
 #action-bar #search-form .submit {
@@ -593,8 +589,6 @@ header a:link, header a:visited {
     border: 1px solid #aaa;
     padding: 5px 10px;
     border-radius: 5px;
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
     width: 20px;
 }
 
@@ -641,8 +635,6 @@ header a:link, header a:visited {
     padding: 20px;
     border: 1px solid #eee;
     border-radius: 10px;
-    -moz-border-radius: 10px;
-    -webkit-border-radius: 10px;
     color: #2e373f;
 }
 
@@ -670,8 +662,6 @@ header a:link, header a:visited {
     border: 1px solid #eee;
     padding: 10px;
     border-radius: 10px;
-    -moz-border-radius: 10px;
-    -webkit-border-radius: 10px;
 }
 
 #new-account .required-field,
@@ -716,8 +706,6 @@ header a:link, header a:visited {
     margin-bottom: 10px;
     border: 1px solid #eee;
     border-radius: 10px;
-    -moz-border-radius: 10px;
-    -webkit-border-radius: 10px;
     color: #c3c3c3;
 }
 
@@ -737,8 +725,6 @@ header a:link, header a:visited {
     padding: 20px;
     border: 1px solid #eee;
     border-radius: 10px;
-    -moz-border-radius: 10px;
-    -webkit-border-radius: 10px;
     color: #2e373f;
 }
 
@@ -764,8 +750,6 @@ header a:link, header a:visited {
     border: 1px solid #aaa;
     padding: 10px;
     border-radius: 10px;
-    -moz-border-radius: 10px;
-    -webkit-border-radius: 10px;
 }
 
 #admin .form-price {
@@ -826,8 +810,6 @@ header a:link, header a:visited {
     padding: 20px;
     border: 1px solid #eee;
     border-radius: 10px;
-    -moz-border-radius: 10px;
-    -webkit-border-radius: 10px;
     color: #2e373f;
 }
 
@@ -928,8 +910,6 @@ header a:link, header a:visited {
     border: 1px solid #aaa;
     padding: 5px 10px;
     border-radius: 5px;
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
     width: 20px;
 }
 
@@ -1084,8 +1064,6 @@ section#promo .default-btn, .default-btn {
     color: #fff;
     padding: 15px 35px;
     border-radius: 5px;
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
     box-shadow: 0px 5px 0px #467f9c;
     text-decoration: none;
 }
@@ -1095,8 +1073,6 @@ section#promo .default-btn, .default-btn {
     color: #fff;
     padding: 15px 35px;
     border-radius: 5px;
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
     box-shadow: 0px 5px 0px #22292f;
     text-decoration: none;
     position: relative;
@@ -1108,8 +1084,6 @@ section#promo .default-btn, .default-btn {
     color: #5f5e5e;
     padding: 10px;
     border-radius: 5px;
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
     box-shadow: 0px 5px 0px #b8b8b8;
     text-decoration: none;
 }
@@ -1127,11 +1101,12 @@ section#promo .default-btn, .default-btn {
 }
 
 .cart-btn {
-    padding: 10px 10px 10px 0;
+    display: block;
     background-color: #5daad0;
     border-radius: 5px;
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
+    overflow: hidden;
+    padding-bottom: 10px;
+    text-align: center;
 }
 
 /* IE7 Button Padding Fix */
@@ -1141,14 +1116,10 @@ section#promo .default-btn, .default-btn {
 }
 
 .cart-btn .price {
+    display: block;
     background-color: #2e373f;
     padding: 10px;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
-    -moz-border-radius-topleft: 5px;
-    -moz-border-radius-bottomleft: 5px;
-    -webkit-border-top-left-radius: 5px;
-    -webkit-border-bottom-left-radius: 5px;
+    margin-bottom: 10px;
 }
 
 .cart-btn:link, .cart-btn:visited, button.cart-btn {
@@ -1166,8 +1137,6 @@ button.cart-btn {
     color: #fff;
     padding: 10px;
     border-radius: 5px;
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
     box-shadow: 0px 5px 0px #467f9c;
     border: none;
 }
