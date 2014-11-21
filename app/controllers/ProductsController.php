@@ -54,7 +54,7 @@ class ProductsController extends BaseController {
 		$message = 'Something went wrong, please try again';
 
 		if ($product) {
-			File::delete('public/'.$product->image);
+			File::delete(public_path($product->image));
 			$product->delete();
 
 			$message = 'Product Deleted';
