@@ -36,10 +36,9 @@
 							<li>
 								<a href="#">Shop by Category <img src="{{ asset('img/down-arrow.gif') }}" alt="Shop by Category" /></a>
 								<ul>
-									<li><a href="#">Laptops</a></li>
-									<li><a href="#">Desktop PC</a></li>
-									<li><a href="#">Smartphones</a></li>
-									<li><a href="#">Tablets</a></li>
+									@foreach($catnav as $cat)
+										<li><a href="{{ URL::to('/store/category/'.$cat->id) }}">{{ $cat->name }}</a></li>
+									@endforeach
 								</ul>
 							</li>
 						</ul>
@@ -99,6 +98,8 @@
 			</section><!-- end main-content -->
 	
 			<hr>
+
+			@yield('pagination')
 
 			<footer>
 				<section id="contact">

@@ -2,6 +2,7 @@
 
 class StoreController extends BaseController {
 	public function __construct() {
+		parent::__construct();
 		$this->beforeFilter('csrf', ['on' => 'post']);
 	}
 
@@ -10,7 +11,7 @@ class StoreController extends BaseController {
 				->with('products', Product::take(4)->orderBy('created_at', 'DESC')->get());
 	}
 
-	public function getView($id){
+	public function getView($id) {
 		$product = Product::find($id);
 
 		if ($product) {
@@ -18,6 +19,19 @@ class StoreController extends BaseController {
 		}
 
 		return	Redirect::to('/')->with('message', 'Invalid Product');
+	}
+
+	public function getCategory($cat_id) {
+		$category = Category::find($cat_id);
+
+		if ($category) {
+			return	View::make('store.category')
+					->with('products', $category->products)/*->paginate(6)*/
+					->with('category', $category);
+		}
+
+		return	Redirect::to('/')->with('message', 'Invalid Category');
+
 	}
 
 }
