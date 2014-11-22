@@ -26,7 +26,7 @@ class StoreController extends BaseController {
 
 		if ($category) {
 			return	View::make('store.category')
-					->with('products', $category->products)/*->paginate(6)*/
+					->with('products', $category->products()->paginate(6))
 					->with('category', $category);
 		}
 
