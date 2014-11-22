@@ -2,8 +2,8 @@
 
 Route::get('/', ['uses' => 'StoreController@getIndex']);
 
-Route::controller('admin/categories', 'CategoriesController');
+Route::controller('/admin/categories', 'CategoriesController');
 
-Route::controller('admin/products', 'ProductsController');
+Route::controller('/admin/products', 'ProductsController');
 
-Route::controller('store', 'StoreController');
+Route::controller('/store', 'StoreController');
