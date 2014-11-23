@@ -24,7 +24,7 @@ class StoreController extends BaseController {
 	public function getCategory($cat_id) {
 		$category = Category::find($cat_id);
 
-		if ($category) {
+		if ($category && !$category->isEmpty()) {
 			return	View::make('store.category')
 					->with('products', $category->products()->paginate(6))
 					->with('category', $category);

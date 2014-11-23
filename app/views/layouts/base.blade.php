@@ -36,9 +36,11 @@
 							<li>
 								<a href="#">Shop by Category <img src="{{ asset('img/down-arrow.gif') }}" alt="Shop by Category" /></a>
 								<ul>
-									@foreach($catnav as $cat)
+								@foreach($catnav as $cat)
+									@if(!$cat->isEmpty())
 										<li><a href="{{ URL::to('/store/category/'.$cat->id) }}">{{ $cat->name }}</a></li>
-									@endforeach
+									@endif
+								@endforeach
 								</ul>
 							</li>
 						</ul>

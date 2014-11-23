@@ -9,4 +9,12 @@ class Category extends Eloquent {
 	public function products(){
 		return $this->hasMany('Product');
 	}
+
+	public function productCount(){
+		return $this->products()->count();
+	}
+
+	public function isEmpty(){
+		return ($this->productCount() < 1) ? true : false;
+	}
 }

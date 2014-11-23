@@ -29,39 +29,41 @@
 	<aside id="categories-menu">
 		<h3>CATEGORIES</h3>
 		<ul>
-			@foreach($catnav as $cat)
+		@foreach($catnav as $cat)
+			@if(!$cat->isEmpty())
 				<li><a href="{{ URL::to('/store/category/'.$cat->id) }}">{{ $cat->name }}</a></li>
-			@endforeach
+			@endif
+		@endforeach
 		</ul>
 	</aside><!-- end categories-menu -->
 
 	<div id="listings">
-		@foreach($products as $product)
-			<div class="product">
-				<a href="{{ URL::to('/store/view/'.$product->id) }}">
-					<img src="{{ asset($product->image) }}" alt="Product" class="feature" style="width:240px;height:127px;">
+	@foreach($products as $product)
+		<div class="product">
+			<a href="{{ URL::to('/store/view/'.$product->id) }}">
+				<img src="{{ asset($product->image) }}" alt="Product" class="feature" style="width:240px;height:127px;">
+			</a>
+
+			<h3><a href="{{ URL::to('/store/view/'.$product->id) }}">{{ $product->title }}</a></h3>
+
+			<p>{{ $product->description }}</p>
+
+			<h5>
+				Availability:
+				<span class="{{ Availability::cssClass($product->availability) }}">
+					{{ Availability::display($product->availability) }}
+				</span>
+			</h5>
+
+			<p>
+				<a href="#" class="cart-btn">
+					<span class="price">P{{ $product->price }}</span>
+					<img src="{{ asset('img/white-cart.gif') }}">
+					ADD TO CART
 				</a>
-
-				<h3><a href="{{ URL::to('/store/view/'.$product->id) }}">{{ $product->title }}</a></h3>
-
-				<p>{{ $product->description }}</p>
-
-				<h5>
-					Availability:
-					<span class="{{ Availability::cssClass($product->availability) }}">
-						{{ Availability::display($product->availability) }}
-					</span>
-				</h5>
-
-				<p>
-					<a href="#" class="cart-btn">
-						<span class="price">P{{ $product->price }}</span>
-						<img src="{{ asset('img/white-cart.gif') }}">
-						ADD TO CART
-					</a>
-				</p>
-			</div>
-		@endforeach
+			</p>
+		</div>
+	@endforeach
 	</div><!-- end listings -->
 @stop
 
