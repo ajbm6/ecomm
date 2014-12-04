@@ -34,4 +34,12 @@ class StoreController extends BaseController {
 
 	}
 
+	public function getSearch(){
+		$keyword = Input::get('keyword');
+
+		return	View::make('store.search')
+				->with('products', Product::where('title', 'LIKE', '%'.$keyword.'%')->get())
+				->with('keyword', $keyword);
+	}
+
 }

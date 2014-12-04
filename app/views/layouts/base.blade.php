@@ -47,8 +47,8 @@
 					</nav>
 
 					<div id="search-form">
-						<form action="#" method="get">
-							<input type="search" name="search" placeholder="Search by keyword" class="search">
+						<form action="{{ URL::to('/store/search') }}" method="get">
+							<input type="text" name="keyword" placeholder="Search by keyword" class="search">
 							<input type="submit" value="Search" class="search submit">
 						</form>
 					</div><!-- end search-form -->
@@ -88,6 +88,8 @@
 			</header>
 
 			@yield('promo')
+
+			@yield('search-keyword')
 
 			<hr>
 
