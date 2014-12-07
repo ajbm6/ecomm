@@ -27,14 +27,14 @@
 		<hr>
 
 		@if($errors->has())
-			<div id="form-errors">
-				<p>The following errors have occured:</p>
-				<ul>
-				@foreach($errors->all() as $error)
-					<li>{{ $error }}</li>
-				@endforeach
-				</ul>
-			</div><!-- end form-errors -->
+		<div id="form-errors">
+			<p>The following errors have occured:</p>
+			<ul>
+			@foreach($errors->all() as $error)
+				<li>{{ $error }}</li>
+			@endforeach
+			</ul>
+		</div><!-- end form-errors -->
 		@endif
 
 		<form method="post" action="{{ URL::to('admin/categories/create') }}">	

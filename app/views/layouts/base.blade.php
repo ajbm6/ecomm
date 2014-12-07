@@ -54,31 +54,39 @@
 					</div><!-- end search-form -->
 
 					<div id="user-menu">
-						
-						<nav id="signin" class="dropdown">
-							<ul>
-								<li>
-									<a href="#"><img src="{{ asset('img/user-icon.gif') }}" alt="Sign In" /> Sign In <img src="{{ asset('img/down-arrow.gif') }}" alt="Sign In" /></a>
-									<ul>
-										<li><a href="#">Sign In</a></li>
-										<li><a href="#">Sign Up</a></li>
-									</ul>
-								</li>
-							</ul>
-						</nav>
 
-						<!--
-						<nav class="dropdown">
-							<ul>
-								<li>
-									<a href="#"><img src="{{ asset('img/user-icon.gif') }}" alt="Andrew Perkins" /> Andrew Perkins <img src="{{ asset('img/down-arrow.gif') }}" alt="Andrew Perkins" /></a>
-									<ul>
-										<li><a href="#">Order History</a></li>
-										<li><a href="#">Sign Out</a></li>
-									</ul>
-								</li>
-							</ul>
-						</nav>-->
+						@if(Auth::check())
+							<nav class="dropdown">
+								<ul>
+									<li>
+										<a href="#">
+											<img src="{{ asset('img/user-icon.gif') }}" alt="{{ Auth::user()->firstname }}">
+											{{ Auth::user()->firstname }}
+											<img src="{{ asset('img/down-arrow.gif') }}" alt="{{ Auth::user()->firstname }}">
+										</a>
+										<ul>
+											<li><a href="#">Order History</a></li>
+											<li><a href="{{ URL::to('users/signout') }}">Sign Out</a></li>
+										</ul>
+									</li>
+								</ul>
+							</nav>
+						@else
+							<nav id="signin" class="dropdown">
+								<ul>
+									<li>
+										<a href="#"><img src="{{ asset('img/user-icon.gif') }}" alt="Sign In">
+											Sign In <img src="{{ asset('img/down-arrow.gif') }}" alt="Sign In">
+										</a>
+										<ul>
+											<li><a href="{{ URL::to('users/signin') }}">Sign In</a></li>
+											<li><a href="{{ URL::to('users/newaccount') }}">Sign Up</a></li>
+										</ul>
+									</li>
+								</ul>
+							</nav>
+						@endif
+
 					</div><!-- end user-menu -->
 
 					<div id="view-cart">
@@ -116,8 +124,8 @@
 					<div id="my-account">
 						<h4>MY ACCOUNT</h4>
 						<ul>
-							<li><a href="#">Sign In</a></li>
-							<li><a href="#">Sign Up</a></li>
+							<li><a href="{{ URL::to('users/signin') }}">Sign In</a></li>
+							<li><a href="{{ URL::to('users/newaccount') }}">Sign Up</a></li>
 							<li><a href="#">Order History</a></li>
 							<li><a href="#">Shopping Cart</a></li>
 						</ul>

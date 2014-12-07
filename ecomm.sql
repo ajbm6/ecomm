@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 08, 2014 at 01:05 AM
+-- Generation Time: Dec 08, 2014 at 03:25 AM
 -- Server version: 5.6.20
 -- PHP Version: 5.5.15
 
@@ -63,7 +63,8 @@ CREATE TABLE IF NOT EXISTS `migrations` (
 INSERT INTO `migrations` (`migration`, `batch`) VALUES
 ('2014_11_08_064928_create_categories_table', 1),
 ('2014_11_09_065720_create_products_table', 2),
-('2014_12_08_003133_create_users_table', 3);
+('2014_12_08_003133_create_users_table', 3),
+('2014_12_08_031710_add_remembertoken_to_users', 4);
 
 -- --------------------------------------------------------
 
@@ -120,15 +121,17 @@ CREATE TABLE IF NOT EXISTS `users` (
   `telephone` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `admin` tinyint(1) NOT NULL DEFAULT '0',
   `created_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00'
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=2 ;
+  `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `remember_token` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=3 ;
 
 --
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `firstname`, `lastname`, `email`, `password`, `telephone`, `admin`, `created_at`, `updated_at`) VALUES
-(1, 'Ranie', 'Santos', 'ransan32@yahoo.com', '$2y$10$oBH7EfUp6H3bs5p2jM5RYOuUUsjPBuVoN/mAh.IesK630EtA3BUvG', '09871234567', 1, '2014-12-07 16:48:13', '2014-12-07 16:48:13');
+INSERT INTO `users` (`id`, `firstname`, `lastname`, `email`, `password`, `telephone`, `admin`, `created_at`, `updated_at`, `remember_token`) VALUES
+(1, 'Ranie', 'Santos', 'ransan32@yahoo.com', '$2y$10$oBH7EfUp6H3bs5p2jM5RYOuUUsjPBuVoN/mAh.IesK630EtA3BUvG', '09871234567', 1, '2014-12-07 16:48:13', '2014-12-07 16:48:13', NULL),
+(2, 'Elijah', 'Jacinto', 'ej@yahoo.com', '$2y$10$PkVri7gmk/JXsAUBGHnVKOGR0hWvTGrITwiErlbhoId8tO6M6PTce', '09091234567', 0, '2014-12-07 19:09:55', '2014-12-07 19:23:47', 'aWKkQEURqZTmhb8R7IOxUCojPZc0haOfb4y6AS0KHTm4l5t6pjLAcNmb0Cor');
 
 --
 -- Indexes for dumped tables
@@ -170,7 +173,7 @@ MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=17;
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
 --
 -- Constraints for dumped tables
 --
