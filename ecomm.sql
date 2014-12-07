@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 21, 2014 at 04:41 PM
+-- Generation Time: Dec 08, 2014 at 01:05 AM
 -- Server version: 5.6.20
 -- PHP Version: 5.5.15
 
@@ -19,7 +19,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `ecomm`
 --
-DROP DATABASE `ecomm`;
 CREATE DATABASE IF NOT EXISTS `ecomm` DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
 USE `ecomm`;
 
@@ -63,7 +62,8 @@ CREATE TABLE IF NOT EXISTS `migrations` (
 
 INSERT INTO `migrations` (`migration`, `batch`) VALUES
 ('2014_11_08_064928_create_categories_table', 1),
-('2014_11_09_065720_create_products_table', 2);
+('2014_11_09_065720_create_products_table', 2),
+('2014_12_08_003133_create_users_table', 3);
 
 -- --------------------------------------------------------
 
@@ -100,10 +100,35 @@ INSERT INTO `products` (`id`, `category_id`, `title`, `description`, `price`, `a
 (10, 4, 'Nexus 7', 'Dolore consectetur maxime, nobis quisquam molestias, cumque quia at perferendis ad enim laboriosam pariatur, dolorem!', '26499.75', 1, 'img/products/2014-11-21-161855-tablet-upload.jpg', '2014-11-21 08:18:55', '2014-11-21 08:18:55'),
 (11, 2, 'Alienware Desktop', 'Reiciendis quam voluptatibus deleniti dolorem consectetur odio omnis, facilis repellat, corporis porro id necessitatibus fugiat?', '36490.75', 1, 'img/products/2014-11-21-162015-desktop-upload.jpg', '2014-11-21 08:20:15', '2014-11-21 08:20:15'),
 (12, 1, 'Dell Ultrabook', 'Deleniti repellendus tempora officiis odit aut deserunt quo ut in. Labore perferendis excepturi, voluptas tempore!', '19499.75', 1, 'img/products/2014-11-21-163654-laptop-upload.jpg', '2014-11-21 08:36:54', '2014-11-21 08:36:54'),
-(13, 4, 'Nexus 10', 'This is an awesome product, with a lot of great features. You\'ll likely be able to use this for many years to come.', '29499.75', 1, 'img/products/2014-11-21-163754-tablet-upload.jpg', '2014-11-21 08:37:54', '2014-11-21 08:37:54'),
-(14, 1, 'Toshiba Laptop', 'This is an awesome product, with a lot of great features. You\'ll likely be able to use this for many years to come.', '16999.75', 1, 'img/products/2014-11-21-163853-laptop-upload.jpg', '2014-11-21 08:38:53', '2014-11-21 08:38:53'),
-(15, 2, 'Asus Desktop', 'This is an awesome product, with a lot of great features. You\'ll likely be able to use this for many years to come.', '11499.75', 1, 'img/products/2014-11-21-164006-desktop-upload.jpg', '2014-11-21 08:40:06', '2014-11-21 08:40:06'),
-(16, 1, 'Macbook Pro', 'This is an awesome product, with a lot of great features. You\'ll likely be able to use this for many years to come.', '55499.75', 1, 'img/products/2014-11-21-164053-laptop-upload.jpg', '2014-11-21 08:40:53', '2014-11-21 08:40:53');
+(13, 4, 'Nexus 10', 'This is an awesome product, with a lot of great features. You''ll likely be able to use this for many years to come.', '29499.75', 1, 'img/products/2014-11-21-163754-tablet-upload.jpg', '2014-11-21 08:37:54', '2014-11-21 08:37:54'),
+(14, 1, 'Toshiba Laptop', 'This is an awesome product, with a lot of great features. You''ll likely be able to use this for many years to come.', '16999.75', 1, 'img/products/2014-11-21-163853-laptop-upload.jpg', '2014-11-21 08:38:53', '2014-11-21 08:38:53'),
+(15, 2, 'Asus Desktop', 'This is an awesome product, with a lot of great features. You''ll likely be able to use this for many years to come.', '11499.75', 1, 'img/products/2014-11-21-164006-desktop-upload.jpg', '2014-11-21 08:40:06', '2014-11-21 08:40:06'),
+(16, 1, 'Macbook Pro', 'This is an awesome product, with a lot of great features. You''ll likely be able to use this for many years to come.', '55499.75', 1, 'img/products/2014-11-21-164053-laptop-upload.jpg', '2014-11-21 08:40:53', '2014-11-21 08:40:53');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `users`
+--
+
+CREATE TABLE IF NOT EXISTS `users` (
+`id` int(10) unsigned NOT NULL,
+  `firstname` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `lastname` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `email` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `password` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `telephone` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `admin` tinyint(1) NOT NULL DEFAULT '0',
+  `created_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00'
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=2 ;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id`, `firstname`, `lastname`, `email`, `password`, `telephone`, `admin`, `created_at`, `updated_at`) VALUES
+(1, 'Ranie', 'Santos', 'ransan32@yahoo.com', '$2y$10$oBH7EfUp6H3bs5p2jM5RYOuUUsjPBuVoN/mAh.IesK630EtA3BUvG', '09871234567', 1, '2014-12-07 16:48:13', '2014-12-07 16:48:13');
 
 --
 -- Indexes for dumped tables
@@ -122,6 +147,12 @@ ALTER TABLE `products`
  ADD PRIMARY KEY (`id`), ADD KEY `products_category_id_foreign` (`category_id`);
 
 --
+-- Indexes for table `users`
+--
+ALTER TABLE `users`
+ ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -135,6 +166,11 @@ MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
 --
 ALTER TABLE `products`
 MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=17;
+--
+-- AUTO_INCREMENT for table `users`
+--
+ALTER TABLE `users`
+MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
 -- Constraints for dumped tables
 --
