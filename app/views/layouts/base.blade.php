@@ -66,6 +66,10 @@
 										</a>
 										<ul>
 											<li><a href="#">Order History</a></li>
+											@if(Auth::user()->admin === 1)
+												<li><a href="{{ URL::to('admin/categories') }}">Manage Categories</a></li>
+												<li><a href="{{ URL::to('admin/products') }}">Manage Products</a></li>
+											@endif
 											<li><a href="{{ URL::to('users/signout') }}">Sign Out</a></li>
 										</ul>
 									</li>
