@@ -33,11 +33,16 @@
 			</h5>
 
 			<p>
-				<a href="#" class="cart-btn">
-					<span class="price">P{{ $product->price }}</span>
-					<img src="{{ asset('img/white-cart.gif') }}">
-					ADD TO CART
-				</a>
+				<form method="post" action="{{ URL::to('store/addtocart') }}">
+					<input type="hidden" name="quantity" value="1">
+					<input type="hidden" name="id" value="{{ $product->id }}">
+					<button type="submit" class="cart-btn">
+						<span class="price">P{{ $product->price }}</span>
+						<img src="{{ asset('img/white-cart.gif') }}">
+						ADD TO CART
+					</button>
+					{{ Form::token() }}
+				</form>
 			</p>
 		</div>
 	@endforeach

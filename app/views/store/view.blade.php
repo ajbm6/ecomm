@@ -10,9 +10,10 @@
 
 		<hr>
 
-		<form action="#" method="post">
-			<label for="qty">Qty:</label>
-			<input type="text" id="qty" name="qty" value="1" maxlength="2">
+		<form action="{{ URL::to('store/addtocart') }}" method="post">
+			<label for="quantity">Qty:</label>
+			<input type="text" id="quantity" name="quantity" value="1" maxlength="2">
+			<input type="hidden" name="id" value="{{ $product->id }}">
 
 			<button type="submit" class="secondary-cart-btn">
 				<img src="{{ asset('img/white-cart.gif') }}">
