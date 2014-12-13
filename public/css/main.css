@@ -1126,6 +1126,9 @@ section#promo .default-btn, .default-btn {
     text-decoration: none;
     color: #fff;
     font-size: 12px;
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
 }
 
 button.cart-btn {
