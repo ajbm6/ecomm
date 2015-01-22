@@ -39,6 +39,8 @@
 						Subtotal: P{{ Cart::total() }}<br>
 						<span>TOTAL: P{{ Cart::total() }}</span><br>
 
+						<!-- Paypal hidden fields -->
+
 						<input type="hidden" name="cmd" value="_xclick">
 						<input type="hidden" name="business" value="ecommsite@yahoo.com"> 
 						<input type="hidden" name="item_name" value="Ecomm Site Purchase"> 
@@ -47,6 +49,8 @@
 						<input type="hidden" name="last_name" value="{{ Auth::user()->lastname }}">
 						<input type="hidden" name="email" value="{{ Auth::user()->email }}">
 						<input type="hidden" name="currency_code" value="PHP"> 
+
+						<!-- Paypal hidden fields -->
 
 						<a href="{{ URL::to('/') }}" class="tertiary-btn">CONTINUE SHOPPING</a>
 						<input type="submit" value="CHECKOUT WITH PAYPAL" class="secondary-cart-btn">
