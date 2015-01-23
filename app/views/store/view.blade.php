@@ -23,7 +23,7 @@
 	</div><!-- end product-details -->
 	<div id="product-info">
 		<p class="price">P{{ $product->price }}</p>
-		<p>Availability: <span>{{ Availability::display($product->availability) }}</span></p>
+		<p>Availability: <span>{{ Availability::display($product->quantity) }}</span></p>
 		<p>Product Code: <span>{{ str_pad($product->id, 5, '0', STR_PAD_LEFT) }}</span></p>
 	</div><!-- end product-info -->
 @stop

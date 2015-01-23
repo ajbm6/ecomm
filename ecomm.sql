@@ -78,7 +78,7 @@ CREATE TABLE IF NOT EXISTS `products` (
   `title` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `description` text COLLATE utf8_unicode_ci NOT NULL,
   `price` decimal(9,2) NOT NULL,
-  `quantity` int(10) NOT NULL DEFAULT '1',
+  `quantity` int(10) NOT NULL DEFAULT '0',
   `image` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00'

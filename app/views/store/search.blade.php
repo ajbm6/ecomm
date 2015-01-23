@@ -22,8 +22,8 @@
 
 			<h5>
 				Availability:
-				<span class="{{ Availability::cssClass($product->availability) }}">
-					{{ Availability::display($product->availability) }}
+				<span class="{{ Availability::cssClass($product->quantity) }}">
+					{{ Availability::display($product->quantity) }}
 				</span>
 			</h5>
 
