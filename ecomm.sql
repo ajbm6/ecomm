@@ -23,7 +23,7 @@ DROP DATABASE `ecomm`;
 CREATE DATABASE IF NOT EXISTS `ecomm` DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
 USE `ecomm`;
 
--- --------------------------------------------------------
+-- ---------------------------------------------------------
 
 --
 -- Table structure for table `categories`
@@ -64,8 +64,7 @@ CREATE TABLE IF NOT EXISTS `migrations` (
 INSERT INTO `migrations` (`migration`, `batch`) VALUES
 ('2014_11_08_064928_create_categories_table', 1),
 ('2014_11_09_065720_create_products_table', 2),
-('2014_12_08_003133_create_users_table', 3),
-('2014_12_08_031710_add_remembertoken_to_users', 4);
+('2014_12_08_003133_create_users_table', 3);
 
 -- --------------------------------------------------------
 
@@ -79,7 +78,7 @@ CREATE TABLE IF NOT EXISTS `products` (
   `title` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `description` text COLLATE utf8_unicode_ci NOT NULL,
   `price` decimal(9,2) NOT NULL,
-  `availability` tinyint(1) NOT NULL DEFAULT '1',
+  `quantity` int(10) NOT NULL DEFAULT '1',
   `image` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00'
@@ -89,7 +88,7 @@ CREATE TABLE IF NOT EXISTS `products` (
 -- Dumping data for table `products`
 --
 
-INSERT INTO `products` (`id`, `category_id`, `title`, `description`, `price`, `availability`, `image`, `created_at`, `updated_at`) VALUES
+INSERT INTO `products` (`id`, `category_id`, `title`, `description`, `price`, `quantity`, `image`, `created_at`, `updated_at`) VALUES
 (1, 1, 'Dell Laptop', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae dolore delectus cum explicabo ipsa nemo!', '17999.75', 1, 'img/products/2014-11-21-160510-laptop-upload.jpg', '2014-11-21 08:05:10', '2014-11-21 08:05:10'),
 (2, 2, 'Dell Desktop', 'Commodi perspiciatis, odit repudiandae voluptatem laborum magni explicabo quo? Commodi dolorum saepe ipsa ratione fuga!', '10999.75', 1, 'img/products/2014-11-21-160633-desktop-upload.jpg', '2014-11-21 08:06:33', '2014-11-21 08:06:33'),
 (3, 2, 'Gateway Desktop', 'Ratione voluptates dolores magni molestias tempore, architecto qui, nulla doloribus, explicabo voluptatum earum atque ad.', '11999.75', 1, 'img/products/2014-11-21-160849-desktop-upload.jpg', '2014-11-21 08:08:49', '2014-11-21 08:08:49'),
