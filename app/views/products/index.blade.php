@@ -21,13 +21,11 @@
 					{{ Form::token() }}
 				</form> - 
 
+				Qty: ({{ $product->quantity }})
 				<form method="post" class="form-inline" action="{{ URL::to('admin/products/toggle-availability') }}">
 					<input type="hidden" name="id" value="{{ $product->id }}">
-					<select name="availability">
-						<option value="1"{{ ($product->quantity === 1) ? ' selected' : '' }}>In Stock</option>
-						<option value="0"{{ ($product->quantity === 0) ? ' selected' : '' }}>Out of Stock</option>
-					</select>
-					<input type="submit" value="Update">
+					<input type="submit" value="Add">
+					<input type="text" name="quantity" class="form-price" value="0">
 					{{ Form::token() }}
 				</form>
 			</li>

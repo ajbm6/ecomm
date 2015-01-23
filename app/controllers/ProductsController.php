@@ -67,7 +67,7 @@ class ProductsController extends BaseController {
 				->with('message', $message);
 	}
 
-	// replace with add quantity function
+	// replace with add quantity function, also change form url
 	public function postToggleAvailability(){
 		$product = Product::find(Input::get('id'));
 
