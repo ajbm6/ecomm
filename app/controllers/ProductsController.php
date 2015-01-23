@@ -29,6 +29,7 @@ class ProductsController extends BaseController {
 			$product->title			= Input::get('title');
 			$product->description	= Input::get('description');
 			$product->price			= Input::get('price');
+			$product->quantity		= Input::get('quantity');
 
 			$image		= Input::file('image');
 			$filename	= date('Y-m-d-His').'-'.$image->getClientOriginalName();

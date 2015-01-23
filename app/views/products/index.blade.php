@@ -17,7 +17,7 @@
 				{{ $product->title }} - 
 				<form method="post" class="form-inline" action="{{ URL::to('admin/products/destroy') }}">
 					<input type="hidden" name="id" value="{{ $product->id }}">
-					<input type="submit" value="delete">
+					<input type="submit" value="Delete">
 					{{ Form::token() }}
 				</form> - 
 
@@ -67,6 +67,10 @@
 			<p>
 				<label for="price">Price</label>
 				<input type="text" name="price" id="price" class="form-price" value="{{ Input::old('price') }}">
+			</p>
+			<p>
+				<label for="quantity">Initial quantity</label>
+				<input type="text" name="quantity" id="quantity" class="form-price" value="{{ (Input::old('quantity') === NULL) ? '1' : Input::old('quantity') }}">
 			</p>
 			<p>
 				<label for="image">Choose an image</label>

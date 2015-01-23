@@ -9,7 +9,7 @@ class Product extends Eloquent {
 		'title'			=> 'required|min:2',
 		'description'	=> 'required|min:20',
 		'price'			=> 'required|numeric',
-		'quantity'		=> 'integer',
+		'quantity'		=> 'required|integer|min:1|max:99',
 		'image'			=> 'required|image|mimes:jpeg,jpg,png'
 	];
 
