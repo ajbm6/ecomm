@@ -23,9 +23,6 @@
 
 		<div id="wrapper">
 			<header>
-				<section id="top-area">
-					<p>Phone orders: {{ Company::$phone }} | Email us: <a href="mailto:{{ Company::$email }}">{{ Company::$email }}</a></p>
-				</section><!-- end top-area -->
 				<section id="action-bar">
 					<div id="logo">
 						<a href="{{ URL::to('/') }}">{{ Company::$name }}</a>

@@ -115,7 +115,7 @@ p, h1, h2, h3, h4, h5, ul, li {
    ============================================================================ */
 
 #wrapper {
-    background: #eee;
+    background: #fff;
     width: 1152px;
     margin: 0 auto;
     border-left: 1px solid #aaa;
@@ -136,20 +136,12 @@ header a:link, header a:visited {
     text-decoration: none;
 }
 
-/* ---- top-area ---- */
-
-#top-area {
-    height: 50px;
-    background-color: #f6f6f6;
-    padding: 0 30px;
-    line-height: 50px;
-}
-
 /* ---- action-bar --- */
 
 #action-bar {
     height: 55px;
-    padding: 35px 0 0 30px;
+    line-height: 55px;
+    padding-left: 30px;
     vertical-align: middle;
     position: relative;
     z-index: 2;
@@ -194,6 +186,7 @@ header a:link, header a:visited {
 
 #action-bar .dropdown ul li ul {
     display: none;
+    line-height: initial;
 }
 
 #action-bar .dropdown ul li a {
@@ -211,7 +204,7 @@ header a:link, header a:visited {
 }
 
 #action-bar .dropdown ul ul li a:hover {
-    color: #aaa;
+    color: #39d;
 }
 
 #action-bar .dropdown li:hover ul {
