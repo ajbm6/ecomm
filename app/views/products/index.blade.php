@@ -17,14 +17,14 @@
 				{{ $product->title }} - 
 				<form method="post" class="form-inline" action="{{ URL::to('admin/products/destroy') }}">
 					<input type="hidden" name="id" value="{{ $product->id }}">
-					<input type="submit" value="Delete">
+					<input type="submit" value="Delete" class="btn-prod btn-prod-danger">
 					{{ Form::token() }}
 				</form> - 
 
 				Qty: ({{ $product->quantity }})
 				<form method="post" class="form-inline" action="{{ URL::to('admin/products/add-quantity') }}">
 					<input type="hidden" name="id" value="{{ $product->id }}">
-					<input type="submit" value="Add">
+					<input type="submit" value="Add" class="btn-prod btn-prod-confirm">
 					<input type="number" name="quantity" class="form-price" value="0">
 					{{ Form::token() }}
 				</form>
