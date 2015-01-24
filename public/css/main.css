@@ -118,7 +118,7 @@ header {
 }
 
 header a:link, header a:visited {
-    color: #5daad0;
+    color: #39d;
     text-decoration: none;
 }
 
@@ -148,7 +148,7 @@ header a:link, header a:visited {
 /* ---- action-bar (logo) ---- */
 
 #action-bar #logo-accent {
-    color: #5daad0;
+    color: #39d;
 }
 
 #action-bar #logo {
@@ -185,7 +185,7 @@ header a:link, header a:visited {
 #action-bar .dropdown ul li a {
     display: block;
     text-decoration: none;
-    color: #5daad0;
+    color: #39d;
     background-color: #fff;
     margin-left: 1px;
     white-space: nowrap;
@@ -248,7 +248,7 @@ header a:link, header a:visited {
 }
 
 #action-bar #view-cart a:link, #action-bar #view-cart a:visited {
-    color: #5daad0;
+    color: #39d;
 }
 
 /* ============================================================================
@@ -277,7 +277,7 @@ header a:link, header a:visited {
 }
 
 #promo p {
-    color: #5daad0;
+    color: #39d;
     font-size: 20px;
     margin-bottom: 50px;
 }
@@ -343,7 +343,7 @@ header a:link, header a:visited {
 }
 
 #promo2 a:link, #promo2 a:visited {
-    color: #5daad0;
+    color: #39d;
     text-decoration: none;
     margin-left: 20px;
 }
@@ -389,7 +389,7 @@ header a:link, header a:visited {
     position: absolute;
     top: 50%;
     left: 50%;
-    color: #5daad0;
+    color: #39d;
     text-decoration: none;
 }
 
@@ -520,11 +520,11 @@ header a:link, header a:visited {
 }
 
 .instock {
-    color: #9dbb6f;
+    color: #090;
 }
 
 .outofstock {
-    color: red;
+    color: #f00;
 }
 
 .product img.feature {
@@ -532,7 +532,7 @@ header a:link, header a:visited {
 }
 
 .product .wish a:link, .product .wish a:visited {
-    color: #5daad0;
+    color: #39d;
     text-decoration: none;
     font-size: 14px;
 }
@@ -555,7 +555,7 @@ header a:link, header a:visited {
 }
 
 #pagination a:link, #pagination a:visited {
-    color: #5daad0;
+    color: #39d;
     text-decoration: none;
 }
 
@@ -595,7 +595,7 @@ header a:link, header a:visited {
 }
 
 #product-details a:link, #product-details a:visited {
-    color: #5daad0;
+    color: #39d;
     text-decoration: none;
     font-size: 12px;
 }
@@ -664,7 +664,7 @@ header a:link, header a:visited {
 
 #new-account .required-field,
 #personal-details .required-field {
-    color: #5daad0;
+    color: #39d;
 }
 
 /* ============================================================================
@@ -755,7 +755,7 @@ header a:link, header a:visited {
 }
 
 #admin .required-field {
-    color: #5daad0;
+    color: #39d;
 }
 
 #admin ul {
@@ -795,7 +795,7 @@ header a:link, header a:visited {
 .form-inline input[type=submit] {
     border: none;
     background-color: #fff;
-    color: #5daad0;
+    color: #39d;
 }
 
 /* ============================================================================
@@ -822,7 +822,7 @@ header a:link, header a:visited {
 }
 
 #contact-us a:link, #contact-us a:visited {
-    color: #5daad0;
+    color: #39d;
     text-decoration: none;
 }
 
@@ -916,7 +916,7 @@ header a:link, header a:visited {
 }
 
 #order-history a:link, #order-history a:visited {
-    color: #5daad0;
+    color: #39d;
     text-decoration: none;
 }
 
@@ -945,7 +945,7 @@ header a:link, header a:visited {
    ============================================================================ */
 
 footer h4 {
-    color: #c3c3c3;
+    color: #999;
     margin-bottom: 15px;
 }
 
@@ -963,7 +963,7 @@ footer #contact h3 {
 }
 
 footer #contact a:link, footer #contact a:visited {
-    color: #5daad0;
+    color: #39d;
     text-decoration: none;
 }
 
@@ -1015,7 +1015,7 @@ footer #copyright #store-desc {
 }
 
 footer #copyright #store-copy {
-    color: #c3c3c3;
+    color: #999;
 }
 
 footer #logo {
@@ -1033,7 +1033,7 @@ footer #logo #logo-accent {
 }
 
 footer #connect a:link, footer #connect a:visited {
-    color: #5daad0;
+    color: #39d;
     text-decoration: none;
 }
 
@@ -1058,7 +1058,7 @@ footer #connect ul li.fb {
    ============================================================================ */
 
 section#promo .default-btn, .default-btn {
-    background-color: #5daad0;
+    background-color: #39d;
     color: #fff;
     padding: 15px 35px;
     border-radius: 5px;
@@ -1100,7 +1100,7 @@ section#promo .default-btn, .default-btn {
 
 .cart-btn {
     display: block;
-    background-color: #5daad0;
+    background-color: #39d;
     border-radius: 5px;
     overflow: hidden;
     padding-bottom: 10px;
@@ -1134,7 +1134,7 @@ button.cart-btn {
 }
 
 .secondary-cart-btn {
-    background-color: #5daad0;
+    background-color: #39d;
     color: #fff;
     padding: 10px;
     border-radius: 5px;
@@ -1148,7 +1148,7 @@ button.cart-btn {
 
 .alert {
     background-color: #faf9f9;
-    color: #5daad0;
+    color: #39d;
     border: 1px solid #ccc;
     padding: 10px;
     margin: 10px;
