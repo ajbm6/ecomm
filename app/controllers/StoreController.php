@@ -47,6 +47,11 @@ class StoreController extends BaseController {
 		$product	= Product::find(Input::get('id'));
 		$quantity	= Input::get('quantity');
 
+		if (!$product) {
+			return	Redirect::to('/')
+					->with('message', 'Invalid Product');
+		}
+
 		Cart::insert([
 			'id'		=> $product->id,
 			'name'		=> $product->title,
