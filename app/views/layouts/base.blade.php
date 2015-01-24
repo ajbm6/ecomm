@@ -10,7 +10,7 @@
 		<meta name="description" content="">
 		<meta name="viewport" content="width=device-width">
 
-		<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+		<link rel="icon" href="{{ asset('favicon.png') }}">
 
 		{{ HTML::style('css/normalize.css') }}
 		{{ HTML::style('css/main.css') }}
