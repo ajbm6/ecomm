@@ -22,10 +22,10 @@
 				</form> - 
 
 				Qty: ({{ $product->quantity }})
-				<form method="post" class="form-inline" action="{{ URL::to('admin/products/toggle-availability') }}">
+				<form method="post" class="form-inline" action="{{ URL::to('admin/products/add-quantity') }}">
 					<input type="hidden" name="id" value="{{ $product->id }}">
 					<input type="submit" value="Add">
-					<input type="text" name="quantity" class="form-price" value="0">
+					<input type="number" name="quantity" class="form-price" value="0">
 					{{ Form::token() }}
 				</form>
 			</li>
@@ -68,7 +68,7 @@
 			</p>
 			<p>
 				<label for="quantity">Initial quantity</label>
-				<input type="text" name="quantity" id="quantity" class="form-price" value="{{ (Input::old('quantity') === NULL) ? '1' : Input::old('quantity') }}">
+				<input type="number" name="quantity" id="quantity" class="form-price" value="{{ (Input::old('quantity') === NULL) ? '1' : Input::old('quantity') }}">
 			</p>
 			<p>
 				<label for="image">Choose an image</label>

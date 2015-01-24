@@ -67,14 +67,13 @@ class ProductsController extends BaseController {
 				->with('message', $message);
 	}
 
-	// replace with add quantity function, also change form url
-	public function postToggleAvailability(){
+	public function postAddQuantity(){
 		$product = Product::find(Input::get('id'));
 
 		$message = 'Invalid Product';
 
 		if ($product) {
-			$product->quantity = Input::get('availability');
+			$product->quantity = $product->quantity + Input::get('quantity');
 			$product->save();
 
 			$message = 'Product Updated';
