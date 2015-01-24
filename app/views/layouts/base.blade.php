@@ -109,9 +109,9 @@
 				@yield('content')
 			</section><!-- end main-content -->
 	
-			<hr>
-
 			@yield('pagination')
+
+			<hr>
 
 			<footer>
 				<section id="contact">
