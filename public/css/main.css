@@ -405,7 +405,7 @@ header a:link, header a:visited {
    ============================================================================ */
 
 #search-keyword {
-    padding: 30px 0 30px 30px;
+    padding: 10px 30px;
 }
 
 #search-keyword h1 {
@@ -959,13 +959,17 @@ footer h4 {
 
 footer #contact {
     background-color: #faf9f9;
-    height: 167px;
+    height: 80px;
     text-align: center;
+    position: relative;
 }
 
 footer #contact h3 {
     color: #2e373f;
-    padding-top: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 footer #contact a:link, footer #contact a:visited {
