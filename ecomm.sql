@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 08, 2014 at 03:25 AM
+-- Generation Time: Jan 24, 2015 at 01:33 PM
 -- Server version: 5.6.20
 -- PHP Version: 5.5.15
 
@@ -23,7 +23,7 @@ DROP DATABASE `ecomm`;
 CREATE DATABASE IF NOT EXISTS `ecomm` DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
 USE `ecomm`;
 
--- ---------------------------------------------------------
+-- --------------------------------------------------------
 
 --
 -- Table structure for table `categories`
@@ -89,11 +89,11 @@ CREATE TABLE IF NOT EXISTS `products` (
 --
 
 INSERT INTO `products` (`id`, `category_id`, `title`, `description`, `price`, `quantity`, `image`, `created_at`, `updated_at`) VALUES
-(1, 1, 'Dell Laptop', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae dolore delectus cum explicabo ipsa nemo!', '17999.75', 1, 'img/products/2014-11-21-160510-laptop-upload.jpg', '2014-11-21 08:05:10', '2014-11-21 08:05:10'),
-(2, 2, 'Dell Desktop', 'Commodi perspiciatis, odit repudiandae voluptatem laborum magni explicabo quo? Commodi dolorum saepe ipsa ratione fuga!', '10999.75', 1, 'img/products/2014-11-21-160633-desktop-upload.jpg', '2014-11-21 08:06:33', '2014-11-21 08:06:33'),
-(3, 2, 'Gateway Desktop', 'Ratione voluptates dolores magni molestias tempore, architecto qui, nulla doloribus, explicabo voluptatum earum atque ad.', '11999.75', 1, 'img/products/2014-11-21-160849-desktop-upload.jpg', '2014-11-21 08:08:49', '2014-11-21 08:08:49'),
+(1, 1, 'Dell Laptop', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae dolore delectus cum explicabo ipsa nemo!', '17999.75', 1, 'img/products/2014-11-21-160510-laptop-upload.jpg', '2014-11-21 08:05:10', '2015-01-24 04:25:34'),
+(2, 2, 'Dell Desktop', 'Commodi perspiciatis, odit repudiandae voluptatem laborum magni explicabo quo? Commodi dolorum saepe ipsa ratione fuga!', '10999.75', 1, 'img/products/2014-11-21-160633-desktop-upload.jpg', '2014-11-21 08:06:33', '2015-01-24 04:25:39'),
+(3, 2, 'Gateway Desktop', 'Ratione voluptates dolores magni molestias tempore, architecto qui, nulla doloribus, explicabo voluptatum earum atque ad.', '11999.75', 1, 'img/products/2014-11-21-160849-desktop-upload.jpg', '2014-11-21 08:08:49', '2015-01-24 04:44:34'),
 (4, 1, 'HP Laptop', 'Non, nesciunt? Perferendis sit quis, blanditiis eos voluptate sed assumenda, dolorem dignissimos eaque aspernatur impedit.', '18499.75', 1, 'img/products/2014-11-21-160958-laptop-upload.jpg', '2014-11-21 08:09:58', '2014-11-21 08:09:58'),
-(5, 3, 'HTC One', 'Similique tempore asperiores, quos ratione laudantium consequatur suscipit veritatis distinctio, aspernatur iure soluta accusantium architecto.', '22499.75', 1, 'img/products/2014-11-21-161113-smartphone-upload.jpg', '2014-11-21 08:11:13', '2014-11-21 08:11:13'),
+(5, 3, 'HTC One', 'Similique tempore asperiores, quos ratione laudantium consequatur suscipit veritatis distinctio, aspernatur iure soluta accusantium architecto.', '22499.75', 1, 'img/products/2014-11-21-161113-smartphone-upload.jpg', '2014-11-21 08:11:13', '2015-01-24 05:18:32'),
 (6, 3, 'Galaxy S4', 'At libero nobis eius, voluptas inventore, adipisci molestiae consectetur magnam fuga, repudiandae asperiores praesentium recusandae.', '34999.75', 1, 'img/products/2014-11-21-161149-smartphone-upload.jpg', '2014-11-21 08:11:49', '2014-11-21 08:11:49'),
 (7, 1, 'Acer Laptop', 'Sequi ex vitae laborum, voluptas error quibusdam, amet voluptate eius odio doloribus, veritatis ullam omnis?', '14499.75', 1, 'img/products/2014-11-21-161224-laptop-upload.jpg', '2014-11-21 08:12:24', '2014-11-21 08:12:24'),
 (8, 4, 'iPad', 'This is an awesome iPad. It can do everything and you should buy it.', '53499.75', 1, 'img/products/2014-11-21-161556-tablet-upload.jpg', '2014-11-21 08:15:56', '2014-11-21 08:15:56'),
@@ -130,7 +130,7 @@ CREATE TABLE IF NOT EXISTS `users` (
 --
 
 INSERT INTO `users` (`id`, `firstname`, `lastname`, `email`, `password`, `telephone`, `admin`, `created_at`, `updated_at`, `remember_token`) VALUES
-(1, 'Ranie', 'Santos', 'ransan32@yahoo.com', '$2y$10$oBH7EfUp6H3bs5p2jM5RYOuUUsjPBuVoN/mAh.IesK630EtA3BUvG', '09871234567', 1, '2014-12-07 16:48:13', '2014-12-07 16:48:13', NULL),
+(1, 'Ranie', 'Santos', 'ransan32@yahoo.com', '$2y$10$oBH7EfUp6H3bs5p2jM5RYOuUUsjPBuVoN/mAh.IesK630EtA3BUvG', '09871234567', 1, '2014-12-07 16:48:13', '2015-01-24 05:16:39', 'brrHkygSLCUC8zKEnhGWk4AxivZRVoKo4FguDgGN0gxGCwZrREb7bCu9cLLt'),
 (2, 'Elijah', 'Jacinto', 'ej@yahoo.com', '$2y$10$PkVri7gmk/JXsAUBGHnVKOGR0hWvTGrITwiErlbhoId8tO6M6PTce', '09091234567', 0, '2014-12-07 19:09:55', '2014-12-07 19:23:47', 'aWKkQEURqZTmhb8R7IOxUCojPZc0haOfb4y6AS0KHTm4l5t6pjLAcNmb0Cor');
 
 --
