@@ -6,7 +6,7 @@
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-		<title>eCommerce</title>
+		<title>{{ Company::$name }}</title>
 		<meta name="description" content="">
 		<meta name="viewport" content="width=device-width">
 
@@ -24,11 +24,11 @@
 		<div id="wrapper">
 			<header>
 				<section id="top-area">
-					<p>Phone orders: 1-800-0000 | Email us: <a href="mailto:office@shop.com">office@shop.com</a></p>
+					<p>Phone orders: {{ Company::$phone }} | Email us: <a href="mailto:{{ Company::$email }}">{{ Company::$email }}</a></p>
 				</section><!-- end top-area -->
 				<section id="action-bar">
 					<div id="logo">
-						<a href="{{ URL::to('/') }}"><span id="logo-accent">e</span>Commerce</a>
+						<a href="{{ URL::to('/') }}">{{ Company::$name }}</a>
 					</div><!-- end logo -->
 
 					<nav class="dropdown">
@@ -118,7 +118,7 @@
 
 			<footer>
 				<section id="contact">
-					<h3>For phone orders please call 1-800-000. You<br>can also email us at <a href="mailto:office@shop.com">office@shop.com</a></h3>
+					<h3>For phone orders please call {{ Company::$phone }}.<br>You can also email us at <a href="mailto:{{ Company::$email }}">{{ Company::$email }}</a></h3>
 				</section><!-- end contact -->
 
 				<hr>
@@ -153,10 +153,10 @@
 				<section class="clearfix">
 					<div id="copyright">
 						<div id="logo">
-							<a href="#"><span id="logo-accent">e</span>Commerce</a>
+							<a href="#">{{ Company::$name }}</a>
 						</div><!-- end logo -->
-						<p id="store-desc">This is a short description of the store.</p>
-						<p id="store-copy">&copy; 2013 eCommerce.</p>
+						<p id="store-desc">{{ Company::$desc }}</p>
+						<p id="store-copy">&copy; 2015 {{ Company::$name }}.</p>
 					</div><!-- end copyright -->
 					<div id="connect">
 						<h4>CONNECT WITH US</h4>

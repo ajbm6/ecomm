@@ -23,10 +23,8 @@
 
 	<section id="signup">
 		<h2>I'm a new customer</h2>
-		<h3>You can create an account in just a few simple steps.<br>
-			Click below to begin.</h3>
 
-		<a href="{{ URL::to('users/newaccount') }}" class="default-btn">CREATE NEW ACCOUNT</a>
+		<a href="{{ URL::to('users/newaccount') }}" class="default-btn">CREATE AN ACCOUNT</a>
 	</section><!--- end signup -->
 
 @stop
