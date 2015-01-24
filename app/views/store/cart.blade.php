@@ -21,7 +21,7 @@
 						<img src="{{ $product->image }}" alt="{{ $product->name }}" width="65" height="37" /> 
 						{{ $product->title }}
 					</td>
-					<td>P{{ $product->price }}</td>
+					<td>&#8369;{{ $product->price }}</td>
 					<td>
 						{{ $product->quantity }}
 					</td>
@@ -36,14 +36,14 @@
 
 				<tr class="total">
 					<td colspan="5">
-						Subtotal: P{{ Cart::total() }}<br>
-						<span>TOTAL: P{{ Cart::total() }}</span><br>
+						Subtotal: &#8369;{{ Cart::total() }}<br>
+						<span>TOTAL: &#8369;{{ Cart::total() }}</span><br>
 
 						<!-- Paypal hidden fields -->
 
 						<input type="hidden" name="cmd" value="_xclick">
-						<input type="hidden" name="business" value="ecommsite@yahoo.com"> 
-						<input type="hidden" name="item_name" value="Ecomm Site Purchase"> 
+						<input type="hidden" name="business" value="{{ Company::$email }}"> 
+						<input type="hidden" name="item_name" value="{{ Company::$name }} Purchase"> 
 						<input type="hidden" name="amount" value="{{ Cart::total() }}">
 						<input type="hidden" name="first_name" value="{{ Auth::user()->firstname }}">
 						<input type="hidden" name="last_name" value="{{ Auth::user()->lastname }}">
