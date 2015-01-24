@@ -21,6 +21,19 @@ textarea {
 body {
     font-size: 1em;
     line-height: 1.4;
+    position: relative;
+}
+
+body:after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: url("../img/tile.gif");
+    opacity: 0.3;
 }
 
 /*
@@ -102,6 +115,7 @@ p, h1, h2, h3, h4, h5, ul, li {
    ============================================================================ */
 
 #wrapper {
+    background: #eee;
     width: 1152px;
     margin: 0 auto;
     border-left: 1px solid #aaa;

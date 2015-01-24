@@ -132,13 +132,15 @@
 							<li><a href="{{ URL::to('store/cart') }}">Shopping Cart</a></li>
 						</ul>
 					</div><!-- end my-account -->
-					<div id="info">
+
+					<!-- <div id="info">
 						<h4>INFORMATION</h4>
 						<ul>
 							<li><a href="#">Terms of Use</a></li>
 							<li><a href="#">Privacy Policy</a></li>
 						</ul>
-					</div><!-- end info -->
+					</div> -->
+
 					<div id="extras">
 						<h4>EXTRAS</h4>
 						<ul>
@@ -158,13 +160,15 @@
 						<p id="store-desc">{{ Company::$desc }}</p>
 						<p id="store-copy">&copy; 2015 {{ Company::$name }}.</p>
 					</div><!-- end copyright -->
-					<div id="connect">
+
+					<!-- <div id="connect">
 						<h4>CONNECT WITH US</h4>
 						<ul>
 							<li class="twitter"><a href="#">Twitter</a></li>
 							<li class="fb"><a href="#">Facebook</a></li>
 						</ul>
-					</div><!-- end connect -->
+					</div> -->
+
 					<div id="payments">
 						<h4>SUPPORTED PAYMENT METHODS</h4>
 						<img src="{{ asset('img/payment-methods.gif') }}" alt="Supported Payment Methods">
