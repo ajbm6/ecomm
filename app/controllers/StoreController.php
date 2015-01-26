@@ -55,6 +55,11 @@ class StoreController extends BaseController {
 					->with('message', 'Invalid Product');
 		}
 
+		if (!$product->isAvailable()) {
+			return	Redirect::to('/store/view/'.$product->id)
+					->with('message', 'This item is out of stock');
+		}
+
 		Cart::insert([
 			'id'		=> $product->id,
 			'name'		=> $product->title,

@@ -13,6 +13,10 @@ class Product extends Eloquent {
 		'image'			=> 'required|image|mimes:jpeg,jpg,png'
 	];
 
+	public function isAvailable(){
+		return ($this->quantity > 0) ? true : false;
+	}
+
 	public function category(){
 		return $this->belongsTo('Category');
 	}

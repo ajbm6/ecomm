@@ -2,20 +2,12 @@
 
 class Availability {
 
-	public static function display($quantity){
-		if ($quantity === 0) {
-			return 'Out of Stock';
-		} else if ($quantity > 0) {
-			return 'In Stock';
-		}
+	public static function display($available){
+		return ($available) ? 'In Stock' : 'Out of Stock';
 	}
 
-	public static function cssClass($quantity){
-		if ($quantity === 0) {
-			return 'outofstock';
-		} else if ($quantity > 0) {
-			return 'instock';
-		}
+	public static function cssClass($available){
+		return ($available) ? 'instock' : 'outofstock';
 	}
 
 }

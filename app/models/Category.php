@@ -4,7 +4,7 @@ class Category extends Eloquent {
 
 	protected $fillable = ['name'];
 
-	public static $rules = ['name' => 'required|min:3'];
+	public static $rules = ['name' => 'required|min:3|unique:categories'];
 
 	public function products(){
 		return $this->hasMany('Product');
