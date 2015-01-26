@@ -1,5 +1,9 @@
 @extends('layouts.base')
 
+@section('title')
+	Search "{{ $keyword }}" | {{ Company::$name }}
+@stop
+
 @section('search-keyword')
 	<hr>
 

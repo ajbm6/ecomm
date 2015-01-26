@@ -1,5 +1,9 @@
 @extends('layouts.base')
 
+@section('title')
+	Your Cart | {{ Company::$name }}
+@stop
+
 @section('content')
 	<div id="shopping-cart">
 		<h1>Shopping Cart &amp; Checkout</h1>

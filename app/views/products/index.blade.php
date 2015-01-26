@@ -1,5 +1,9 @@
 @extends('layouts.base')
 
+@section('title')
+	Manage Products | {{ Company::$name }}
+@stop
+
 @section('content')
 	<div id="admin">
 		<h1>Products Admin Panel</h1>

@@ -1,5 +1,9 @@
 @extends('layouts.base')
 
+@section('title')
+	{{ $category->name }} | {{ Company::$name }}
+@stop
+
 @section('promo')
 	<section id="promo-alt">
 		<div id="promo1">

@@ -1,5 +1,9 @@
 @extends('layouts.base')
 
+@section('title')
+	Contact Us | {{ Company::$name }}
+@stop
+
 @section('content')
 	<div id="contact-us">
 		<h1>Contact Us</h1>

@@ -1,5 +1,9 @@
 @extends('layouts.base')
 
+@section('title')
+	{{ $product->title }} | {{ Company::$name }}
+@stop
+
 @section('content')
 	<div id="product-image">
 		<img src="{{ asset($product->image) }}" alt="{{ $product->title }}">

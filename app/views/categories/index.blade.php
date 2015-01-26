@@ -1,5 +1,9 @@
 @extends('layouts.base')
 
+@section('title')
+	Manage Categories | {{ Company::$name }}
+@stop
+
 @section('content')
 	<div id="admin">
 		<h1>Categories Admin Panel</h1>

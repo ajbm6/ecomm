@@ -1,5 +1,9 @@
 @extends('layouts.base')
 
+@section('title')
+	Create Your Account | {{ Company::$name }}
+@stop
+
 @section('content')
 	
 	<div id="new-account">

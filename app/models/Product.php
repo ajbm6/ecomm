@@ -6,7 +6,7 @@ class Product extends Eloquent {
 
 	public static $rules = [
 		'category_id'	=> 'required|integer',
-		'title'			=> 'required|min:2',
+		'title'			=> 'required|min:2|unique:products',
 		'description'	=> 'required|min:20',
 		'price'			=> 'required|numeric',
 		'quantity'		=> 'required|integer|min:1|max:99',

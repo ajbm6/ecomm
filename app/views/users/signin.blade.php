@@ -1,5 +1,9 @@
 @extends('layouts.base')
 
+@section('title')
+	Sign In | {{ Company::$name }}
+@stop
+
 @section('content')
 
 	<section id="signin-form">
