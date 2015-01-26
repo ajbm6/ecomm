@@ -31,6 +31,14 @@
 				<input type="text" name="lastname" id="lastname" value="{{ Input::old('lastname') }}">
 			</p>
 			<p>
+				<label for="address">Address</label>
+				<textarea name="address" id="address">{{ Input::old('address') }}</textarea>
+			</p>
+			<p>
+				<label for="city">City</label>
+				<input type="text" name="city" id="city" value="{{ Input::old('city') }}">
+			</p>
+			<p>
 				<label for="email">Email</label>
 				<input type="text" name="email" id="email" value="{{ Input::old('email') }}">
 			</p>

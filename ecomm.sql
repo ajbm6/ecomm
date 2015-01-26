@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 27, 2015 at 12:54 AM
+-- Generation Time: Jan 27, 2015 at 03:09 AM
 -- Server version: 5.6.20
 -- PHP Version: 5.5.15
 
@@ -41,10 +41,10 @@ CREATE TABLE IF NOT EXISTS `categories` (
 --
 
 INSERT INTO `categories` (`id`, `name`, `created_at`, `updated_at`) VALUES
-(1, 'Laptops', '2014-11-07 23:42:46', '2014-11-07 23:42:46'),
-(2, 'Desktop PC', '2014-11-07 23:43:58', '2014-11-07 23:43:58'),
-(3, 'Smart Phones', '2014-11-07 23:44:13', '2014-11-07 23:44:13'),
-(4, 'Tablets', '2014-11-07 23:44:31', '2014-11-07 23:44:31');
+(1, 'Laptops', '2014-11-07 15:42:46', '2014-11-07 15:42:46'),
+(2, 'Desktop PC', '2014-11-07 15:43:58', '2014-11-07 15:43:58'),
+(3, 'Smart Phones', '2014-11-07 15:44:13', '2014-11-07 15:44:13'),
+(4, 'Tablets', '2014-11-07 15:44:31', '2014-11-07 15:44:31');
 
 -- --------------------------------------------------------
 
@@ -63,8 +63,8 @@ CREATE TABLE IF NOT EXISTS `migrations` (
 
 INSERT INTO `migrations` (`migration`, `batch`) VALUES
 ('2014_11_08_064928_create_categories_table', 1),
-('2014_11_09_065720_create_products_table', 2),
-('2014_12_08_003133_create_users_table', 3);
+('2014_11_09_065720_create_products_table', 1),
+('2014_12_08_003133_create_users_table', 1);
 
 -- --------------------------------------------------------
 
@@ -78,7 +78,7 @@ CREATE TABLE IF NOT EXISTS `products` (
   `title` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `description` text COLLATE utf8_unicode_ci NOT NULL,
   `price` decimal(9,2) NOT NULL,
-  `quantity` int(10) NOT NULL DEFAULT '0',
+  `quantity` int(11) NOT NULL DEFAULT '0',
   `image` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00'
@@ -89,22 +89,22 @@ CREATE TABLE IF NOT EXISTS `products` (
 --
 
 INSERT INTO `products` (`id`, `category_id`, `title`, `description`, `price`, `quantity`, `image`, `created_at`, `updated_at`) VALUES
-(1, 1, 'Dell Laptop', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae dolore delectus cum explicabo ipsa nemo!', '17999.75', 9, 'img/products/2014-11-21-160510-laptop-upload.jpg', '2014-11-21 08:05:10', '2015-01-24 04:25:34'),
-(2, 2, 'Dell Desktop', 'Commodi perspiciatis, odit repudiandae voluptatem laborum magni explicabo quo? Commodi dolorum saepe ipsa ratione fuga!', '10999.75', 9, 'img/products/2014-11-21-160633-desktop-upload.jpg', '2014-11-21 08:06:33', '2015-01-24 04:25:39'),
-(3, 2, 'Gateway Desktop', 'Ratione voluptates dolores magni molestias tempore, architecto qui, nulla doloribus, explicabo voluptatum earum atque ad.', '11999.75', 9, 'img/products/2014-11-21-160849-desktop-upload.jpg', '2014-11-21 08:08:49', '2015-01-24 04:44:34'),
-(4, 1, 'HP Laptop', 'Non, nesciunt? Perferendis sit quis, blanditiis eos voluptate sed assumenda, dolorem dignissimos eaque aspernatur impedit.', '18499.75', 9, 'img/products/2014-11-21-160958-laptop-upload.jpg', '2014-11-21 08:09:58', '2014-11-21 08:09:58'),
-(5, 3, 'HTC One', 'Similique tempore asperiores, quos ratione laudantium consequatur suscipit veritatis distinctio, aspernatur iure soluta accusantium architecto.', '22499.75', 9, 'img/products/2014-11-21-161113-smartphone-upload.jpg', '2014-11-21 08:11:13', '2015-01-24 05:18:32'),
-(6, 3, 'Galaxy S4', 'At libero nobis eius, voluptas inventore, adipisci molestiae consectetur magnam fuga, repudiandae asperiores praesentium recusandae.', '34999.75', 9, 'img/products/2014-11-21-161149-smartphone-upload.jpg', '2014-11-21 08:11:49', '2014-11-21 08:11:49'),
-(7, 1, 'Acer Laptop', 'Sequi ex vitae laborum, voluptas error quibusdam, amet voluptate eius odio doloribus, veritatis ullam omnis?', '14499.75', 9, 'img/products/2014-11-21-161224-laptop-upload.jpg', '2014-11-21 08:12:24', '2014-11-21 08:12:24'),
-(8, 4, 'iPad', 'This is an awesome iPad. It can do everything and you should buy it.', '53499.75', 9, 'img/products/2014-11-21-161556-tablet-upload.jpg', '2014-11-21 08:15:56', '2014-11-21 08:15:56'),
-(9, 1, 'Sager Laptop', 'Recusandae nostrum tenetur exercitationem, quos ea earum. Nulla veniam ea obcaecati voluptatem explicabo, recusandae. Voluptatem.', '15999.75', 9, 'img/products/2014-11-21-161721-laptop-upload.jpg', '2014-11-21 08:17:21', '2014-11-21 08:17:21'),
-(10, 4, 'Nexus 7', 'Dolore consectetur maxime, nobis quisquam molestias, cumque quia at perferendis ad enim laboriosam pariatur, dolorem!', '26499.75', 9, 'img/products/2014-11-21-161855-tablet-upload.jpg', '2014-11-21 08:18:55', '2014-11-21 08:18:55'),
-(11, 2, 'Alienware Desktop', 'Reiciendis quam voluptatibus deleniti dolorem consectetur odio omnis, facilis repellat, corporis porro id necessitatibus fugiat?', '36490.75', 9, 'img/products/2014-11-21-162015-desktop-upload.jpg', '2014-11-21 08:20:15', '2014-11-21 08:20:15'),
-(12, 1, 'Dell Ultrabook', 'Deleniti repellendus tempora officiis odit aut deserunt quo ut in. Labore perferendis excepturi, voluptas tempore!', '19499.75', 9, 'img/products/2014-11-21-163654-laptop-upload.jpg', '2014-11-21 08:36:54', '2014-11-21 08:36:54'),
-(13, 4, 'Nexus 10', 'This is an awesome product, with a lot of great features. You''ll likely be able to use this for many years to come.', '29499.75', 9, 'img/products/2014-11-21-163754-tablet-upload.jpg', '2014-11-21 08:37:54', '2014-11-21 08:37:54'),
-(14, 1, 'Toshiba Laptop', 'This is an awesome product, with a lot of great features. You''ll likely be able to use this for many years to come.', '16999.50', 9, 'img/products/2014-11-21-163853-laptop-upload.jpg', '2014-11-21 08:38:53', '2014-11-21 08:38:53'),
-(15, 2, 'Asus Desktop', 'This is an awesome product, with a lot of great features. You''ll likely be able to use this for many years to come.', '11499.75', 0, 'img/products/2014-11-21-164006-desktop-upload.jpg', '2014-11-21 08:40:06', '2014-11-21 08:40:06'),
-(16, 1, 'Macbook Pro', 'This is an awesome product, with a lot of great features. You''ll likely be able to use this for many years to come.', '55499.50', 9, 'img/products/2014-11-21-164053-laptop-upload.jpg', '2014-11-21 08:40:53', '2014-11-21 08:40:53');
+(1, 1, 'Dell Laptop', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae dolore delectus cum explicabo ipsa nemo!', '17999.75', 9, 'img/products/2014-11-21-160510-laptop-upload.jpg', '2014-11-21 00:05:10', '2015-01-23 20:25:34'),
+(2, 2, 'Dell Desktop', 'Commodi perspiciatis, odit repudiandae voluptatem laborum magni explicabo quo? Commodi dolorum saepe ipsa ratione fuga!', '10999.75', 9, 'img/products/2014-11-21-160633-desktop-upload.jpg', '2014-11-21 00:06:33', '2015-01-23 20:25:39'),
+(3, 2, 'Gateway Desktop', 'Ratione voluptates dolores magni molestias tempore, architecto qui, nulla doloribus, explicabo voluptatum earum atque ad.', '11999.75', 9, 'img/products/2014-11-21-160849-desktop-upload.jpg', '2014-11-21 00:08:49', '2015-01-23 20:44:34'),
+(4, 1, 'HP Laptop', 'Non, nesciunt? Perferendis sit quis, blanditiis eos voluptate sed assumenda, dolorem dignissimos eaque aspernatur impedit.', '18499.75', 9, 'img/products/2014-11-21-160958-laptop-upload.jpg', '2014-11-21 00:09:58', '2014-11-21 00:09:58'),
+(5, 3, 'HTC One', 'Similique tempore asperiores, quos ratione laudantium consequatur suscipit veritatis distinctio, aspernatur iure soluta accusantium architecto.', '22499.75', 9, 'img/products/2014-11-21-161113-smartphone-upload.jpg', '2014-11-21 00:11:13', '2015-01-23 21:18:32'),
+(6, 3, 'Galaxy S4', 'At libero nobis eius, voluptas inventore, adipisci molestiae consectetur magnam fuga, repudiandae asperiores praesentium recusandae.', '34999.75', 9, 'img/products/2014-11-21-161149-smartphone-upload.jpg', '2014-11-21 00:11:49', '2014-11-21 00:11:49'),
+(7, 1, 'Acer Laptop', 'Sequi ex vitae laborum, voluptas error quibusdam, amet voluptate eius odio doloribus, veritatis ullam omnis?', '14499.75', 9, 'img/products/2014-11-21-161224-laptop-upload.jpg', '2014-11-21 00:12:24', '2014-11-21 00:12:24'),
+(8, 4, 'iPad', 'This is an awesome iPad. It can do everything and you should buy it.', '53499.75', 9, 'img/products/2014-11-21-161556-tablet-upload.jpg', '2014-11-21 00:15:56', '2014-11-21 00:15:56'),
+(9, 1, 'Sager Laptop', 'Recusandae nostrum tenetur exercitationem, quos ea earum. Nulla veniam ea obcaecati voluptatem explicabo, recusandae. Voluptatem.', '15999.75', 9, 'img/products/2014-11-21-161721-laptop-upload.jpg', '2014-11-21 00:17:21', '2014-11-21 00:17:21'),
+(10, 4, 'Nexus 7', 'Dolore consectetur maxime, nobis quisquam molestias, cumque quia at perferendis ad enim laboriosam pariatur, dolorem!', '26499.75', 9, 'img/products/2014-11-21-161855-tablet-upload.jpg', '2014-11-21 00:18:55', '2014-11-21 00:18:55'),
+(11, 2, 'Alienware Desktop', 'Reiciendis quam voluptatibus deleniti dolorem consectetur odio omnis, facilis repellat, corporis porro id necessitatibus fugiat?', '36490.75', 9, 'img/products/2014-11-21-162015-desktop-upload.jpg', '2014-11-21 00:20:15', '2014-11-21 00:20:15'),
+(12, 1, 'Dell Ultrabook', 'Deleniti repellendus tempora officiis odit aut deserunt quo ut in. Labore perferendis excepturi, voluptas tempore!', '19499.75', 9, 'img/products/2014-11-21-163654-laptop-upload.jpg', '2014-11-21 00:36:54', '2014-11-21 00:36:54'),
+(13, 4, 'Nexus 10', 'This is an awesome product, with a lot of great features. You''ll likely be able to use this for many years to come.', '29499.75', 9, 'img/products/2014-11-21-163754-tablet-upload.jpg', '2014-11-21 00:37:54', '2014-11-21 00:37:54'),
+(14, 1, 'Toshiba Laptop', 'This is an awesome product, with a lot of great features. You''ll likely be able to use this for many years to come.', '16999.50', 9, 'img/products/2014-11-21-163853-laptop-upload.jpg', '2014-11-21 00:38:53', '2014-11-21 00:38:53'),
+(15, 2, 'Asus Desktop', 'This is an awesome product, with a lot of great features. You''ll likely be able to use this for many years to come.', '11499.75', 0, 'img/products/2014-11-21-164006-desktop-upload.jpg', '2014-11-21 00:40:06', '2014-11-21 00:40:06'),
+(16, 1, 'Macbook Pro', 'This is an awesome product, with a lot of great features. You''ll likely be able to use this for many years to come.', '55499.50', 9, 'img/products/2014-11-21-164053-laptop-upload.jpg', '2014-11-21 00:40:53', '2014-11-21 00:40:53');
 
 -- --------------------------------------------------------
 
@@ -116,6 +116,8 @@ CREATE TABLE IF NOT EXISTS `users` (
 `id` int(10) unsigned NOT NULL,
   `firstname` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `lastname` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `address` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `city` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `email` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `password` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `telephone` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
@@ -129,9 +131,9 @@ CREATE TABLE IF NOT EXISTS `users` (
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `firstname`, `lastname`, `email`, `password`, `telephone`, `admin`, `created_at`, `updated_at`, `remember_token`) VALUES
-(1, 'Ranie', 'Santos', 'ransan32@yahoo.com', '$2y$10$oBH7EfUp6H3bs5p2jM5RYOuUUsjPBuVoN/mAh.IesK630EtA3BUvG', '09871234567', 1, '2014-12-07 16:48:13', '2015-01-24 05:16:39', 'brrHkygSLCUC8zKEnhGWk4AxivZRVoKo4FguDgGN0gxGCwZrREb7bCu9cLLt'),
-(2, 'Elijah', 'Jacinto', 'ej@yahoo.com', '$2y$10$PkVri7gmk/JXsAUBGHnVKOGR0hWvTGrITwiErlbhoId8tO6M6PTce', '09091234567', 0, '2014-12-07 19:09:55', '2015-01-26 16:47:43', '9owDrga90lNxFZn3OPrq6xLkI9syjqcUFJibUCcqwk7RPiYnB8d0p9wCSpMv');
+INSERT INTO `users` (`id`, `firstname`, `lastname`, `address`, `city`, `email`, `password`, `telephone`, `admin`, `created_at`, `updated_at`, `remember_token`) VALUES
+(1, 'Ranie', 'Santos', '#76 Bernal St. Barangay Rosario Pasig City', 'Pasig', 'ransan32@yahoo.com', '$2y$10$1DCqIXdc0dvcpAGVBbm/Me.1kmY0qU9RlN/x1EJg/hx1QtYFAvhpm', '09871234567', 1, '2015-01-26 19:08:08', '2015-01-26 19:14:16', 'zPPBYKNcfHOmN7rLYwrqHtj94D6tFChi1ALX3DSEbnvyfSJUZMB52smV7zgI'),
+(2, 'Elijah', 'Jacinto', 'Paraiso St.', 'Manila', 'ej@yahoo.com', '$2y$10$RfVwznyaYJjkRyC1kN/pl.x/rRUQZDLoMtBrdCO1nuoaUNvcaUbtK', '09091234567', 0, '2015-01-26 19:08:08', '2015-01-26 19:14:25', 'k8h9xRMj3I1UUbQLrWX8po4gzHyG4esaqTjq85GspLx1UiIXHhOQPexpEwkA');
 
 --
 -- Indexes for dumped tables

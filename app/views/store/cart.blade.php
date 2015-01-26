@@ -51,6 +51,8 @@
 						<input type="hidden" name="amount" value="{{ Cart::total() }}">
 						<input type="hidden" name="first_name" value="{{ Auth::user()->firstname }}">
 						<input type="hidden" name="last_name" value="{{ Auth::user()->lastname }}">
+						<input type="hidden" name="address1" value="{{ Auth::user()->address }}">
+						<input type="hidden" name="city" value="{{ Auth::user()->city }}">
 						<input type="hidden" name="email" value="{{ Auth::user()->email }}">
 						<input type="hidden" name="currency_code" value="PHP"> 
 
