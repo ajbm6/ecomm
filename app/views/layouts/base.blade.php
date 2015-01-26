@@ -51,7 +51,7 @@
 
 					<div id="search-form">
 						<form action="{{ URL::to('/store/search') }}" method="get">
-							<input type="text" name="keyword" placeholder="Search by keyword" class="search">
+							<input type="text" name="keyword" placeholder="Search by keyword" class="search" autocomplete="off">
 							<input type="submit" value="Search" class="search submit">
 						</form>
 					</div><!-- end search-form -->

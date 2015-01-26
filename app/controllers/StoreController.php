@@ -36,10 +36,13 @@ class StoreController extends BaseController {
 	}
 
 	public function getSearch(){
-		$keyword = Input::get('keyword');
+		$keyword	= Input::get('keyword');
+		$products	= Product::where('title', 'LIKE', '%'.$keyword.'%');
+		$count		= $products->count();
 
 		return	View::make('store.search')
-				->with('products', Product::where('title', 'LIKE', '%'.$keyword.'%')->get())
+				->with('count', $count)
+				->with('products', $products->paginate(8))
 				->with('keyword', $keyword);
 	}
 
