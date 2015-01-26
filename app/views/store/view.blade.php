@@ -16,13 +16,14 @@
 
 		<form action="{{ URL::to('store/addtocart') }}" method="post">
 			<label for="quantity">Qty:</label>
-			<input type="text" id="quantity" name="quantity" value="1" maxlength="2">
+			<input type="number" id="quantity" name="quantity" value="1" min="1" max="99" autocomplete="off">
 			<input type="hidden" name="id" value="{{ $product->id }}">
 
 			<button type="submit" class="secondary-cart-btn">
 				<img src="{{ asset('img/white-cart.gif') }}">
 				ADD TO CART
 			</button>
+			{{ Form::token() }}
 		</form>
 	</div><!-- end product-details -->
 	<div id="product-info">

@@ -30,7 +30,7 @@
 						{{ $product->quantity }}
 					</td>
 					<td>
-						{{ $product->price }}
+						{{ number_format($product->price * $product->quantity, 2) }}
 						<a href="{{ URL::to('store/removeitem/'.$product->identifier) }}">
 							<img src="{{ asset('img/remove.gif') }}" alt="Remove product">
 						</a>
@@ -40,8 +40,8 @@
 
 				<tr class="total">
 					<td colspan="5">
-						Subtotal: &#8369;{{ Cart::total() }}<br>
-						<span>TOTAL: &#8369;{{ Cart::total() }}</span><br>
+						Subtotal: &#8369;{{ number_format(Cart::total(), 2) }}<br>
+						<span>TOTAL: &#8369;{{ number_format(Cart::total(), 2) }}</span><br>
 
 						<!-- Paypal hidden fields -->
 
