@@ -8,7 +8,7 @@
 	<hr>
 
 	<section id="search-keyword">
-		<h1>Search Results for <span>"{{ $keyword }}"</span></h1>
+		<h1>Search results for <span>"{{ $keyword }}"</span> ({{ $products->count() }} found)</h1>
 	</section><!-- end search-keyword -->
 @stop
 
