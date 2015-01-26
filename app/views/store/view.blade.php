@@ -14,17 +14,19 @@
 
 		<hr>
 
-		<form action="{{ URL::to('store/addtocart') }}" method="post">
-			<label for="quantity">Qty:</label>
-			<input type="number" id="quantity" name="quantity" value="1" min="1" max="99" autocomplete="off">
-			<input type="hidden" name="id" value="{{ $product->id }}">
+		@if($product->isAvailable())
+			<form action="{{ URL::to('store/addtocart') }}" method="post">
+				<label for="quantity">Qty:</label>
+				<input type="number" id="quantity" name="quantity" value="1" min="1" max="99" autocomplete="off">
+				<input type="hidden" name="id" value="{{ $product->id }}">
 
-			<button type="submit" class="secondary-cart-btn">
-				<img src="{{ asset('img/white-cart.gif') }}">
-				ADD TO CART
-			</button>
-			{{ Form::token() }}
-		</form>
+				<button type="submit" class="secondary-cart-btn">
+					<img src="{{ asset('img/white-cart.gif') }}">
+					ADD TO CART
+				</button>
+				{{ Form::token() }}
+			</form>
+		@endif
 	</div><!-- end product-details -->
 	<div id="product-info">
 		<p class="price">&#8369;{{ $product->price }}</p>

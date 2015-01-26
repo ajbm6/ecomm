@@ -1113,6 +1113,12 @@ section#promo .default-btn, .default-btn {
     text-align: center;
 }
 
+form.outofstock {
+    height: 35px;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
 /* IE7 Button Padding Fix */
 .lt-ie8 .cart-btn {
     display: inline-block;

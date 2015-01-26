@@ -16,10 +16,10 @@
 		</h5>
 
 		<p>
-			<form method="post" action="{{ URL::to('store/addtocart') }}">
+			<form method="post" action="{{ URL::to('store/addtocart') }}" class="{{ Availability::cssClass($product->isAvailable()) }}">
 				<input type="hidden" name="quantity" value="1">
 				<input type="hidden" name="id" value="{{ $product->id }}">
-				<button type="submit" class="cart-btn">
+				<button type="submit" class="cart-btn"{{ ($product->isAvailable()) ? '' : ' disabled' }}>
 					<span class="price">&#8369;{{ $product->price }}</span>
 					<img src="{{ asset('img/white-cart.gif') }}">
 					ADD TO CART
