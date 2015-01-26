@@ -103,7 +103,7 @@ INSERT INTO `products` (`id`, `category_id`, `title`, `description`, `price`, `q
 (12, 1, 'Dell Ultrabook', 'Deleniti repellendus tempora officiis odit aut deserunt quo ut in. Labore perferendis excepturi, voluptas tempore!', '19499.75', 9, 'img/products/2014-11-21-163654-laptop-upload.jpg', '2014-11-21 08:36:54', '2014-11-21 08:36:54'),
 (13, 4, 'Nexus 10', 'This is an awesome product, with a lot of great features. You''ll likely be able to use this for many years to come.', '29499.75', 9, 'img/products/2014-11-21-163754-tablet-upload.jpg', '2014-11-21 08:37:54', '2014-11-21 08:37:54'),
 (14, 1, 'Toshiba Laptop', 'This is an awesome product, with a lot of great features. You''ll likely be able to use this for many years to come.', '16999.50', 9, 'img/products/2014-11-21-163853-laptop-upload.jpg', '2014-11-21 08:38:53', '2014-11-21 08:38:53'),
-(15, 2, 'Asus Desktop', 'This is an awesome product, with a lot of great features. You''ll likely be able to use this for many years to come.', '11499.75', 9, 'img/products/2014-11-21-164006-desktop-upload.jpg', '2014-11-21 08:40:06', '2014-11-21 08:40:06'),
+(15, 2, 'Asus Desktop', 'This is an awesome product, with a lot of great features. You''ll likely be able to use this for many years to come.', '11499.75', 0, 'img/products/2014-11-21-164006-desktop-upload.jpg', '2014-11-21 08:40:06', '2014-11-21 08:40:06'),
 (16, 1, 'Macbook Pro', 'This is an awesome product, with a lot of great features. You''ll likely be able to use this for many years to come.', '55499.50', 9, 'img/products/2014-11-21-164053-laptop-upload.jpg', '2014-11-21 08:40:53', '2014-11-21 08:40:53');
 
 -- --------------------------------------------------------
