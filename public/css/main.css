@@ -775,6 +775,38 @@ header a:link, header a:visited {
     margin-bottom: 10px;
 }
 
+#admin table {
+    width: 100%;
+    border: 1px solid #999;
+    margin-bottom: 30px;
+}
+
+#admin tr:nth-child(even){
+    background: #ddd;
+}
+
+#admin td{
+    padding: 5px 0;
+    border-left: 1px solid #999;
+    border-right: 1px solid #999;
+}
+
+#admin td:nth-child(1){
+    padding-left: 10px;
+}
+
+#admin td:nth-child(2){
+    width: 180px;
+    text-align: center;
+}
+
+#admin td:nth-child(3){
+    width: 80px;
+    text-align: center;
+}
+
+
+
 /* ============================================================================
     form-errors
     =========================================================================== */

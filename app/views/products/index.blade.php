@@ -12,30 +12,33 @@
 		<p>Here you can view, delete, and create new products.</p>
 
 		<h2>Products</h2>
-		<hr>
 
-		<ul>
+		<table>
 		@foreach($products as $product)
-			<li>
-				<img src="{{ asset($product->image) }}" alt="{{ $product->title }}" style="width:50px;"> 
-				{{ $product->title }} - 
-
-				Qty: {{ $product->quantity }}
-				<form method="post" class="form-inline" action="{{ URL::to('admin/products/add-quantity') }}">
-					<input type="hidden" name="id" value="{{ $product->id }}">
-					<input type="submit" value="Add" class="btn-prod btn-prod-confirm">
-					<input type="number" name="quantity" class="form-price" value="0">
-					{{ Form::token() }}
-				</form> - 
-
-				<form method="post" class="form-inline" action="{{ URL::to('admin/products/destroy') }}">
-					<input type="hidden" name="id" value="{{ $product->id }}">
-					<input type="submit" value="Delete" class="btn-prod btn-prod-danger">
-					{{ Form::token() }}
-				</form>
-			</li>
+			<tr>
+				<td>
+					<img src="{{ asset($product->image) }}" alt="{{ $product->title }}" style="width:50px;"> 
+					{{ $product->title }}
+				</td>
+				<td>
+					Qty: {{ $product->quantity }}
+					<form method="post" class="form-inline" action="{{ URL::to('admin/products/add-quantity') }}">
+						<input type="hidden" name="id" value="{{ $product->id }}">
+						<input type="submit" value="Add" class="btn-prod btn-prod-confirm">
+						<input type="number" name="quantity" class="form-price" value="0">
+						{{ Form::token() }}
+					</form>
+				</td>
+				<td>
+					<form method="post" class="form-inline" action="{{ URL::to('admin/products/destroy') }}">
+						<input type="hidden" name="id" value="{{ $product->id }}">
+						<input type="submit" value="Delete" class="btn-prod btn-prod-danger">
+						{{ Form::token() }}
+					</form>
+				</td>
+			</tr>
 		@endforeach
-		</ul>
+		</table>
 
 		<h2>Create New product</h2>
 		<hr>
