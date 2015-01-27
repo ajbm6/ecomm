@@ -34,13 +34,16 @@ class CategoriesController extends BaseController {
 	public function postDestroy(){
 		$category = Category::find(Input::get('id'));
 
-		if ($category) {
+		if (!$category) {
+			$message = 'Invalid Category';
+		} else if (!$category->isEmpty()) {
+			$message = 'Cannot delete categories with 1 or more products';
+		} else {
+			$message = 'Category Deleted';
 			$category->delete();
-			return	Redirect::to('admin/categories/index')
-					->with('message', 'Category Deleted');
 		}
 
 		return	Redirect::to('admin/categories/index')
-				->with('message', 'Something went wrong, please try again');
+				->with('message', $message);
 	}
 }

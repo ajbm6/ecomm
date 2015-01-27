@@ -54,13 +54,12 @@ class ProductsController extends BaseController {
 	public function postDestroy(){
 		$product = Product::find(Input::get('id'));
 
-		$message = 'Something went wrong, please try again';
-
-		if ($product) {
+		if (!$product) {
+			$message = 'Invalid Product';
+		} else {
+			$message = 'Product Deleted';
 			File::delete(public_path($product->image));
 			$product->delete();
-
-			$message = 'Product Deleted';
 		}
 
 		return	Redirect::to('admin/products/index')
