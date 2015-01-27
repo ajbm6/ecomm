@@ -11,21 +11,27 @@
 
 		<p>Here you can view, delete, and create new categories.</p>
 
-		<h2>Categories</h2>
+		<h2>Category List</h2>
 		<hr>
 
-		<ul>
+		<table>
+			<tr>
+				<th>Category</th>
+				<th class="col-delete">Delete</th>
+			</tr>
 		@foreach($categories as $category)
-			<li>
-				{{ $category->name }} ({{ $category->productCount() }}) - 
-				<form method="post" class="form-inline" action="{{ URL::to('admin/categories/destroy') }}">
-					<input type="hidden" name="id" value="{{ $category->id }}">
-					<input type="submit" value="Delete" class="btn-prod btn-prod-danger">
-					{{ Form::token() }}
-				</form>
-			</li>
+			<tr>
+				<td>{{ $category->name }} ({{ $category->productCount() }})</td>
+				<td>
+					<form method="post" class="form-inline" action="{{ URL::to('admin/categories/destroy') }}">
+						<input type="hidden" name="id" value="{{ $category->id }}">
+						<input type="submit" value="Delete" class="btn-prod btn-prod-danger">
+						{{ Form::token() }}
+					</form>
+				</td>
+			</tr>
 		@endforeach
-		</ul>
+		</table>
 
 		<h2>Create New Category</h2>
 		<hr>

@@ -11,20 +11,27 @@
 
 		<p>Here you can view, delete, and create new products.</p>
 
-		<h2>Products</h2>
+		<h2>Product List</h2>
 
 		<table>
+			<tr>
+				<th>Product</th>
+				<th colspan="2">Stock</th>
+				<th class="col-delete">Delete</th>
+			</tr>
 		@foreach($products as $product)
 			<tr>
 				<td>
 					<img src="{{ asset($product->image) }}" alt="{{ $product->title }}" style="width:50px;"> 
 					{{ $product->title }}
 				</td>
-				<td>
-					Qty: {{ $product->quantity }}
+				<td class="col-stock">
+					{{ $product->quantity }}
+				</td>
+				<td class="col-addstock">
 					<form method="post" class="form-inline" action="{{ URL::to('admin/products/add-quantity') }}">
 						<input type="hidden" name="id" value="{{ $product->id }}">
-						<input type="submit" value="Add" class="btn-prod btn-prod-confirm">
+						<input type="submit" value="Add" class="btn-prod btn-prod-blue">
 						<input type="number" name="quantity" class="form-price" value="0">
 						{{ Form::token() }}
 					</form>

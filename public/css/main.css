@@ -781,28 +781,40 @@ header a:link, header a:visited {
     margin-bottom: 30px;
 }
 
-#admin tr:nth-child(even){
+#admin tr:nth-child(odd){
     background: #ddd;
 }
 
-#admin td{
+#admin th, td{
     padding: 5px 0;
     border-left: 1px solid #999;
     border-right: 1px solid #999;
 }
 
+#admin th{
+    background: #39d;
+    color: #fff;
+}
+
+#admin td{
+    text-align: center;
+}
+
 #admin td:nth-child(1){
     padding-left: 10px;
+    text-align: left;
 }
 
-#admin td:nth-child(2){
-    width: 180px;
-    text-align: center;
+#admin td.col-stock{
+    width: 60px;
 }
 
-#admin td:nth-child(3){
+#admin td.col-addstock{
+    width: 130px;
+}
+
+#admin th.col-delete{
     width: 80px;
-    text-align: center;
 }
 
 
@@ -1242,6 +1254,11 @@ input[type="submit"].btn-prod{
     border-radius: 5px;
     height: 24px;
     color: #fff;
+}
+
+input[type="submit"].btn-prod-blue{
+    background: #39d;
+    box-shadow: 0px 3px 0px #479;
 }
 
 input[type="submit"].btn-prod-confirm{
