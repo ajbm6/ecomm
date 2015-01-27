@@ -775,6 +775,11 @@ header a:link, header a:visited {
     margin-bottom: 10px;
 }
 
+#admin img.tiny{
+    width: 50px;
+    border: 1px solid #39d;
+}
+
 #admin table {
     width: 100%;
     border: 1px solid #999;

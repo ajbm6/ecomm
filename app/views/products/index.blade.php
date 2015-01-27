@@ -12,6 +12,7 @@
 		<p>Here you can view, delete, and create new products.</p>
 
 		<h2>Product List</h2>
+		<hr>
 
 		<table>
 			<tr>
@@ -22,7 +23,7 @@
 		@foreach($products as $product)
 			<tr>
 				<td>
-					<img src="{{ asset($product->image) }}" alt="{{ $product->title }}" style="width:50px;"> 
+					<img src="{{ asset($product->image) }}" alt="{{ $product->title }}" class="tiny"> 
 					{{ $product->title }}
 				</td>
 				<td class="col-stock">
