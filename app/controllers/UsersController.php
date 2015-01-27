@@ -56,6 +56,12 @@ class UsersController extends BaseController {
 	}
 
 	public function getSignout() {
+		foreach (Cart::contents() as $item) {
+			$product = Product::find($item->id);
+			$product->quantity += $item->quantity;
+			$product->save();
+		}
+		Cart::destroy();
 		Auth::logout();
 		return	Redirect::to('users/signin')
 				->with('message', 'You have been signed out.');

@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 27, 2015 at 03:09 AM
+-- Generation Time: Jan 27, 2015 at 08:15 PM
 -- Server version: 5.6.20
 -- PHP Version: 5.5.15
 
@@ -89,22 +89,22 @@ CREATE TABLE IF NOT EXISTS `products` (
 --
 
 INSERT INTO `products` (`id`, `category_id`, `title`, `description`, `price`, `quantity`, `image`, `created_at`, `updated_at`) VALUES
-(1, 1, 'Dell Laptop', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae dolore delectus cum explicabo ipsa nemo!', '17999.75', 9, 'img/products/2014-11-21-160510-laptop-upload.jpg', '2014-11-21 00:05:10', '2015-01-23 20:25:34'),
-(2, 2, 'Dell Desktop', 'Commodi perspiciatis, odit repudiandae voluptatem laborum magni explicabo quo? Commodi dolorum saepe ipsa ratione fuga!', '10999.75', 9, 'img/products/2014-11-21-160633-desktop-upload.jpg', '2014-11-21 00:06:33', '2015-01-23 20:25:39'),
-(3, 2, 'Gateway Desktop', 'Ratione voluptates dolores magni molestias tempore, architecto qui, nulla doloribus, explicabo voluptatum earum atque ad.', '11999.75', 9, 'img/products/2014-11-21-160849-desktop-upload.jpg', '2014-11-21 00:08:49', '2015-01-23 20:44:34'),
-(4, 1, 'HP Laptop', 'Non, nesciunt? Perferendis sit quis, blanditiis eos voluptate sed assumenda, dolorem dignissimos eaque aspernatur impedit.', '18499.75', 9, 'img/products/2014-11-21-160958-laptop-upload.jpg', '2014-11-21 00:09:58', '2014-11-21 00:09:58'),
-(5, 3, 'HTC One', 'Similique tempore asperiores, quos ratione laudantium consequatur suscipit veritatis distinctio, aspernatur iure soluta accusantium architecto.', '22499.75', 9, 'img/products/2014-11-21-161113-smartphone-upload.jpg', '2014-11-21 00:11:13', '2015-01-23 21:18:32'),
-(6, 3, 'Galaxy S4', 'At libero nobis eius, voluptas inventore, adipisci molestiae consectetur magnam fuga, repudiandae asperiores praesentium recusandae.', '34999.75', 9, 'img/products/2014-11-21-161149-smartphone-upload.jpg', '2014-11-21 00:11:49', '2014-11-21 00:11:49'),
-(7, 1, 'Acer Laptop', 'Sequi ex vitae laborum, voluptas error quibusdam, amet voluptate eius odio doloribus, veritatis ullam omnis?', '14499.75', 9, 'img/products/2014-11-21-161224-laptop-upload.jpg', '2014-11-21 00:12:24', '2014-11-21 00:12:24'),
-(8, 4, 'iPad', 'This is an awesome iPad. It can do everything and you should buy it.', '53499.75', 9, 'img/products/2014-11-21-161556-tablet-upload.jpg', '2014-11-21 00:15:56', '2014-11-21 00:15:56'),
-(9, 1, 'Sager Laptop', 'Recusandae nostrum tenetur exercitationem, quos ea earum. Nulla veniam ea obcaecati voluptatem explicabo, recusandae. Voluptatem.', '15999.75', 9, 'img/products/2014-11-21-161721-laptop-upload.jpg', '2014-11-21 00:17:21', '2014-11-21 00:17:21'),
-(10, 4, 'Nexus 7', 'Dolore consectetur maxime, nobis quisquam molestias, cumque quia at perferendis ad enim laboriosam pariatur, dolorem!', '26499.75', 9, 'img/products/2014-11-21-161855-tablet-upload.jpg', '2014-11-21 00:18:55', '2014-11-21 00:18:55'),
-(11, 2, 'Alienware Desktop', 'Reiciendis quam voluptatibus deleniti dolorem consectetur odio omnis, facilis repellat, corporis porro id necessitatibus fugiat?', '36490.75', 9, 'img/products/2014-11-21-162015-desktop-upload.jpg', '2014-11-21 00:20:15', '2014-11-21 00:20:15'),
-(12, 1, 'Dell Ultrabook', 'Deleniti repellendus tempora officiis odit aut deserunt quo ut in. Labore perferendis excepturi, voluptas tempore!', '19499.75', 9, 'img/products/2014-11-21-163654-laptop-upload.jpg', '2014-11-21 00:36:54', '2014-11-21 00:36:54'),
-(13, 4, 'Nexus 10', 'This is an awesome product, with a lot of great features. You''ll likely be able to use this for many years to come.', '29499.75', 9, 'img/products/2014-11-21-163754-tablet-upload.jpg', '2014-11-21 00:37:54', '2014-11-21 00:37:54'),
-(14, 1, 'Toshiba Laptop', 'This is an awesome product, with a lot of great features. You''ll likely be able to use this for many years to come.', '16999.50', 9, 'img/products/2014-11-21-163853-laptop-upload.jpg', '2014-11-21 00:38:53', '2014-11-21 00:38:53'),
-(15, 2, 'Asus Desktop', 'This is an awesome product, with a lot of great features. You''ll likely be able to use this for many years to come.', '11499.75', 0, 'img/products/2014-11-21-164006-desktop-upload.jpg', '2014-11-21 00:40:06', '2014-11-21 00:40:06'),
-(16, 1, 'Macbook Pro', 'This is an awesome product, with a lot of great features. You''ll likely be able to use this for many years to come.', '55499.50', 9, 'img/products/2014-11-21-164053-laptop-upload.jpg', '2014-11-21 00:40:53', '2014-11-21 00:40:53');
+(1, 1, 'Dell Laptop', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae dolore delectus cum explicabo ipsa nemo!', '17999.75', 9, 'img/products/2014-11-21-160510-laptop-upload.jpg', '2014-11-20 16:05:10', '2015-01-23 12:25:34'),
+(2, 2, 'Dell Desktop', 'Commodi perspiciatis, odit repudiandae voluptatem laborum magni explicabo quo? Commodi dolorum saepe ipsa ratione fuga!', '10999.75', 9, 'img/products/2014-11-21-160633-desktop-upload.jpg', '2014-11-20 16:06:33', '2015-01-23 12:25:39'),
+(3, 2, 'Gateway Desktop', 'Ratione voluptates dolores magni molestias tempore, architecto qui, nulla doloribus, explicabo voluptatum earum atque ad.', '11999.75', 9, 'img/products/2014-11-21-160849-desktop-upload.jpg', '2014-11-20 16:08:49', '2015-01-23 12:44:34'),
+(4, 1, 'HP Laptop', 'Non, nesciunt? Perferendis sit quis, blanditiis eos voluptate sed assumenda, dolorem dignissimos eaque aspernatur impedit.', '18499.75', 9, 'img/products/2014-11-21-160958-laptop-upload.jpg', '2014-11-20 16:09:58', '2014-11-20 16:09:58'),
+(5, 3, 'HTC One', 'Similique tempore asperiores, quos ratione laudantium consequatur suscipit veritatis distinctio, aspernatur iure soluta accusantium architecto.', '22499.75', 9, 'img/products/2014-11-21-161113-smartphone-upload.jpg', '2014-11-20 16:11:13', '2015-01-23 13:18:32'),
+(6, 3, 'Galaxy S4', 'At libero nobis eius, voluptas inventore, adipisci molestiae consectetur magnam fuga, repudiandae asperiores praesentium recusandae.', '34999.75', 9, 'img/products/2014-11-21-161149-smartphone-upload.jpg', '2014-11-20 16:11:49', '2014-11-20 16:11:49'),
+(7, 1, 'Acer Laptop', 'Sequi ex vitae laborum, voluptas error quibusdam, amet voluptate eius odio doloribus, veritatis ullam omnis?', '14499.75', 9, 'img/products/2014-11-21-161224-laptop-upload.jpg', '2014-11-20 16:12:24', '2014-11-20 16:12:24'),
+(8, 4, 'iPad', 'This is an awesome iPad. It can do everything and you should buy it.', '53499.75', 9, 'img/products/2014-11-21-161556-tablet-upload.jpg', '2014-11-20 16:15:56', '2014-11-20 16:15:56'),
+(9, 1, 'Sager Laptop', 'Recusandae nostrum tenetur exercitationem, quos ea earum. Nulla veniam ea obcaecati voluptatem explicabo, recusandae. Voluptatem.', '15999.75', 9, 'img/products/2014-11-21-161721-laptop-upload.jpg', '2014-11-20 16:17:21', '2014-11-20 16:17:21'),
+(10, 4, 'Nexus 7', 'Dolore consectetur maxime, nobis quisquam molestias, cumque quia at perferendis ad enim laboriosam pariatur, dolorem!', '26499.75', 9, 'img/products/2014-11-21-161855-tablet-upload.jpg', '2014-11-20 16:18:55', '2014-11-20 16:18:55'),
+(11, 2, 'Alienware Desktop', 'Reiciendis quam voluptatibus deleniti dolorem consectetur odio omnis, facilis repellat, corporis porro id necessitatibus fugiat?', '36490.75', 9, 'img/products/2014-11-21-162015-desktop-upload.jpg', '2014-11-20 16:20:15', '2014-11-20 16:20:15'),
+(12, 1, 'Dell Ultrabook', 'Deleniti repellendus tempora officiis odit aut deserunt quo ut in. Labore perferendis excepturi, voluptas tempore!', '19499.75', 9, 'img/products/2014-11-21-163654-laptop-upload.jpg', '2014-11-20 16:36:54', '2014-11-20 16:36:54'),
+(13, 4, 'Nexus 10', 'This is an awesome product, with a lot of great features. You''ll likely be able to use this for many years to come.', '29499.75', 9, 'img/products/2014-11-21-163754-tablet-upload.jpg', '2014-11-20 16:37:54', '2014-11-20 16:37:54'),
+(14, 1, 'Toshiba Laptop', 'This is an awesome product, with a lot of great features. You''ll likely be able to use this for many years to come.', '16999.50', 9, 'img/products/2014-11-21-163853-laptop-upload.jpg', '2014-11-20 16:38:53', '2014-11-20 16:38:53'),
+(15, 2, 'Asus Desktop', 'This is an awesome product, with a lot of great features. You''ll likely be able to use this for many years to come.', '11499.75', 0, 'img/products/2014-11-21-164006-desktop-upload.jpg', '2014-11-20 16:40:06', '2014-11-20 16:40:06'),
+(16, 1, 'Macbook Pro', 'This is an awesome product, with a lot of great features. You''ll likely be able to use this for many years to come.', '55499.50', 9, 'img/products/2014-11-21-164053-laptop-upload.jpg', '2014-11-20 16:40:53', '2014-11-20 16:40:53');
 
 -- --------------------------------------------------------
 
