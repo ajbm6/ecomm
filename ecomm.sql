@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 27, 2015 at 08:15 PM
+-- Generation Time: Jan 28, 2015 at 12:07 AM
 -- Server version: 5.6.20
 -- PHP Version: 5.5.15
 
@@ -34,7 +34,7 @@ CREATE TABLE IF NOT EXISTS `categories` (
   `name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00'
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=5 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=6 ;
 
 --
 -- Dumping data for table `categories`
@@ -44,7 +44,8 @@ INSERT INTO `categories` (`id`, `name`, `created_at`, `updated_at`) VALUES
 (1, 'Laptops', '2014-11-07 15:42:46', '2014-11-07 15:42:46'),
 (2, 'Desktop PC', '2014-11-07 15:43:58', '2014-11-07 15:43:58'),
 (3, 'Smart Phones', '2014-11-07 15:44:13', '2014-11-07 15:44:13'),
-(4, 'Tablets', '2014-11-07 15:44:31', '2014-11-07 15:44:31');
+(4, 'Tablets', '2014-11-07 15:44:31', '2014-11-07 15:44:31'),
+(5, 'Storage', '2015-01-27 16:07:06', '2015-01-27 16:07:06');
 
 -- --------------------------------------------------------
 
@@ -165,7 +166,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `categories`
 --
 ALTER TABLE `categories`
-MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
+MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT for table `products`
 --

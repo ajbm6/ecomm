@@ -1217,15 +1217,10 @@ button.cart-btn {
     width: 1050px;
 }
 
-
-
-
-
-
-
-
-
-
+img.restrict{
+    height:23px;
+    transform:scaleX(-1);
+}
 
 /* ==========================================================================
    Helper classes

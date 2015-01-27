@@ -23,11 +23,15 @@
 			<tr>
 				<td>{{ $category->name }} ({{ $category->productCount() }})</td>
 				<td>
-					<form method="post" class="form-inline" action="{{ URL::to('admin/categories/destroy') }}">
-						<input type="hidden" name="id" value="{{ $category->id }}">
-						<input type="submit" value="Delete" class="btn-prod btn-prod-danger">
-						{{ Form::token() }}
-					</form>
+					@if($category->isEmpty())
+						<form method="post" class="form-inline" action="{{ URL::to('admin/categories/destroy') }}">
+							<input type="hidden" name="id" value="{{ $category->id }}">
+							<input type="submit" value="Delete" class="btn-prod btn-prod-danger">
+							{{ Form::token() }}
+						</form>
+					@else
+						<img src="{{ asset('img/restrict.png') }}" class="restrict">
+					@endif
 				</td>
 			</tr>
 		@endforeach
