@@ -20,7 +20,7 @@
 				{{ $category->name }} ({{ $category->productCount() }}) - 
 				<form method="post" class="form-inline" action="{{ URL::to('admin/categories/destroy') }}">
 					<input type="hidden" name="id" value="{{ $category->id }}">
-					<input type="submit" value="delete">
+					<input type="submit" value="Delete" class="btn-prod btn-prod-danger">
 					{{ Form::token() }}
 				</form>
 			</li>
