@@ -53,12 +53,16 @@ class StoreController extends BaseController {
 		if (!$product) {
 			return	Redirect::to('/')
 					->with('message', 'Invalid Product');
-		}
-
-		if (!$product->isAvailable()) {
+		} else if (!$product->isAvailable()) {
 			return	Redirect::to('/store/view/'.$product->id)
 					->with('message', 'This item is out of stock');
+		} else if ($quantity > $product->quantity) {
+			return	Redirect::to('/store/view/'.$product->id)
+					->with('message', 'This item does not have enough stock to fill your order');
 		}
+
+		$product->quantity -= $quantity;
+		$product->save();
 
 		Cart::insert([
 			'id'		=> $product->id,
@@ -78,6 +82,11 @@ class StoreController extends BaseController {
 
 	public function getRemoveitem($identifier) {
 		$item = Cart::item($identifier);
+
+		$product = Product::find($item->id);
+		$product->quantity += $item->quantity;
+		$product->save();
+
 		$item->remove();
 		return	Redirect::to('store/cart');
 	}
