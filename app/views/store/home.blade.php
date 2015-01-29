@@ -12,7 +12,7 @@
 @stop
 
 @section('content')
-	<h2>New Products</h2>
+	<h2>Featured Products</h2>
 	<hr>
 	<div id="products">
 		@include('includes.product-loop')

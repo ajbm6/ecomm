@@ -8,8 +8,8 @@ class StoreController extends BaseController {
 	}
 
 	public function getIndex() {
-		return	View::make('store.index')
-				->with('products', Product::take(4)->orderBy('created_at', 'DESC')->get());
+		return	View::make('store.home')
+				->with('products', Product::orderByRaw('RAND()')->take(4)->get());
 	}
 
 	public function getView($id) {
