@@ -17,7 +17,7 @@
 		@if($product->isAvailable())
 			<form action="{{ URL::to('store/addtocart') }}" method="post">
 				<label for="quantity">Qty:</label>
-				<input type="number" id="quantity" name="quantity" value="1" min="1" max="99" autocomplete="off">
+				<input type="number" id="quantity" name="quantity" value="1" min="1" max="{{ $product->quantity }}" autocomplete="off">
 				<input type="hidden" name="id" value="{{ $product->id }}">
 
 				<button type="submit" class="secondary-cart-btn">

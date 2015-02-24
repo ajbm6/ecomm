@@ -16,7 +16,7 @@ class ProductsController extends BaseController {
 		}
 
 		return	View::make('products.index')
-				->with('products', Product::all())
+				->with('products', Product::orderBy('id', 'DESC')->get())
 				->with('categories', $categories);
 	}
 
