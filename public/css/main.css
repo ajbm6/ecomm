@@ -773,6 +773,13 @@ header a:link, header a:visited {
     border: 1px solid #39d;
 }
 
+.new-product{
+    font-size: 0.7em;
+    font-weight: bold;
+    color: #f00;
+    vertical-align: top;
+}
+
 #admin table {
     width: 100%;
     border: 1px solid #999;

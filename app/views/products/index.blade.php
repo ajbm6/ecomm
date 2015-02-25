@@ -25,6 +25,9 @@
 				<td>
 					<img src="{{ asset($product->image) }}" alt="{{ $product->title }}" class="tiny"> 
 					{{ $product->title }}
+					@if($product->isNew())
+						<span class="new-product">NEW!</span>
+					@endif
 				</td>
 				<td class="col-stock">
 					{{ $product->quantity }}

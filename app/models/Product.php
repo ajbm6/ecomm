@@ -20,4 +20,10 @@ class Product extends Eloquent {
 	public function category(){
 		return $this->belongsTo('Category');
 	}
+
+	public function isNew(){
+		$created = $this->created_at->timestamp;
+		$now = time();
+		return ($now < $created + 86400) ? true : false;
+	}
 }
