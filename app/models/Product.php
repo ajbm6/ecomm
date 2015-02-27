@@ -24,6 +24,6 @@ class Product extends Eloquent {
 	public function isNew(){
 		$created = $this->created_at->timestamp;
 		$now = time();
-		return ($now < $created + 86400) ? true : false;
+		return ($created > $now - 86400) ? true : false;
 	}
 }
