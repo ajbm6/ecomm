@@ -68,9 +68,10 @@
 			<p>
 				<label for="category_id">Category</label>
 				<select name="category_id" id="category_id">
-				@foreach($categories as $id => $name)
-					<option value="{{ $id }}"{{ ($id === (int)Input::old('category_id')) ? ' selected' : '' }}>{{ $name }}</option>
-				@endforeach
+					<option value="">- - -</option>
+					@foreach($categories as $id => $name)
+						<option value="{{ $id }}"{{ ($id === (int)Input::old('category_id')) ? ' selected' : '' }}>{{ $name }}</option>
+					@endforeach
 				</select>
 			</p>
 			<p>
