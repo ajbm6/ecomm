@@ -9,7 +9,7 @@ class StoreController extends BaseController {
 
 	public function getIndex() {
 		return	View::make('store.home')
-				->with('products', Product::orderByRaw('RAND()')->take(4)->get());
+				->with('products', Product::where('quantity', '>', 0)->orderByRaw('RAND()')->take(4)->get());
 	}
 
 	public function getView($id) {
