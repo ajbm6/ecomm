@@ -101,8 +101,6 @@
 				</section><!-- end action-bar -->
 			</header>
 
-			@yield('promo')
-
 			@yield('search-keyword')
 
 			<hr>
